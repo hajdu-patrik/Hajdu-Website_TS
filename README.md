@@ -17,7 +17,7 @@ The project was engineered to bridge the gap between heavy industrial expertise 
 ## 🚀 Live Production
 
 **The application is deployed and accessible at:**
-👉 **[https://hajdu.hu](https://hajdu.hu)**
+👉 **[https://hajdu-hazel.vercel.app](https://hajdu-hazel.vercel.app)**
 
 ---
 
@@ -60,4 +60,4 @@ Any push to the `main` branch automatically triggers a new build and deployment.
 
 | Environment | Status |
 | :--- | :--- |
-| **Production** | [![Vercel App](https://img.shields.io/badge/Visit-Live_App-success?style=for-the-badge&logo=vercel)](https://hajdu.hu) |
+| **Production** | [![Vercel App](https://img.shields.io/badge/Visit-Live_App-success?style=for-the-badge&logo=vercel)](https://hajdu-hazel.vercel.app) |

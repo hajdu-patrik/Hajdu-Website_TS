@@ -195,7 +195,7 @@ export default function Home() {
                   <h4 className="text-lg font-black text-slate-900 dark:text-white mb-3">Hajdú Zsolt</h4>
                   <div className="flex flex-col gap-2">
                     <a href="mailto:hajdu.zsolt@ghajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
-                      <Mail size={16} /> hajdu.zsolt@ghajdu.hu
+                      <Mail size={16} /> hajdu.zsolt@hajdu.hu
                     </a>
                     <a href="tel:+36209294317" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
                       <Phone size={16} /> +36 20 929 4317
@@ -207,7 +207,7 @@ export default function Home() {
                   <h4 className="text-lg font-black text-slate-900 dark:text-slate-300 mb-3">Hajdú Tamás</h4>
                   <div className="flex flex-col gap-2">
                     <a href="mailto:hajdu.tamas@ghajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
-                      <Mail size={16} /> hajdu.tamas@ghajdu.hu
+                      <Mail size={16} /> hajdu.tamas@hajdu.hu
                     </a>
                     <a href="tel:+36209293964" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
                       <Phone size={16} /> +36 20 929 3964
