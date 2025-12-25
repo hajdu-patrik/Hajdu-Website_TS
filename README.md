@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 
-## Getting Started
+# Hajdú Közmű Kft. | Corporate Web Engineering
 
-First, run the development server:
+This repository contains the source code for the official corporate platform of **Hajdú Közmű Kft.**, a leading firm specializing in utility construction and water management infrastructure. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project was engineered to bridge the gap between heavy industrial expertise and modern digital aesthetics, ensuring a high-performance, accessible, and visually striking user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Live Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**The application is deployed and accessible at:**
+👉 **[https://hajdu.hu](https://hajdu.hu)**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Engineering Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Semantic Theme Architecture:** Implemented a robust Dark/Light mode toggle using CSS variables and `next-themes`. The Light mode was specifically tuned with "soft-contrast" palettes (`bg-slate-50`) to reduce eye strain while maintaining brand integrity.
+* **High-Fidelity Animations:** Integrated `framer-motion` for hardware-accelerated transitions. Features include an "Infinite Loop" partner slider and staggered entrance animations for section headers.
+* **Performance-First Assets:** Utilized Next.js `next/image` for automatic WebP conversion and lazy-loading, significantly improving Largest Contentful Paint (LCP) scores.
+* **Responsive Fluid Layouts:** Engineered a grid-based system that adapts from mobile-first views to wide-screen desktop monitors using Tailwind CSS v4's modern utility engine.
+* **Accessible Navigation:** Custom hook-based scroll logic to handle internal anchor links (`#contact`) across multiple pages, ensuring consistent UX regardless of the entry point.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Technology Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Framework:** [Next.js 15+](https://nextjs.org/) (App Router Architecture)
+* **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed for enterprise-grade reliability)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (Atomic CSS approach)
+* **Motion Engine:** [Framer Motion](https://www.framer.com/motion/)
+* **Icons:** [Lucide React](https://lucide.dev/)
+* **CI/CD:** [Vercel](https://vercel.com/) (Automated builds & deployments)
+
+---
+
+## ⚠️ Important Notice: Project Status
+
+This repository is published **for portfolio and demonstration purposes only**.
+
+This was a private, commercial project developed for a specific client. The intellectual property and all rights to the code belong to the client.
+
+**This is not an open-source project.** You are strictly prohibited from copying, distributing, modifying, or using this code for any academic, commercial, or personal projects. Please see the `LICENSE.md` file for a detailed breakdown of these restrictions.
+
+---
+
+## 📦 Deployment
+
+This project is configured for automated deployment via **Vercel**.
+Any push to the `main` branch automatically triggers a new build and deployment.
+
+| Environment | Status |
+| :--- | :--- |
+| **Production** | [![Vercel App](https://img.shields.io/badge/Visit-Live_App-success?style=for-the-badge&logo=vercel)](https://hajdu.hu) |
