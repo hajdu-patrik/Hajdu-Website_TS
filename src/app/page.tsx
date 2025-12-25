@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="group p-5 bg-white dark:bg-slate-800/40 rounded-2xl border-t-4 border-blue-600 flex flex-col items-center text-center transition-all hover:shadow-xl shadow-md">
                   <h4 className="text-lg font-black text-slate-900 dark:text-white mb-3">Hajdú Zsolt</h4>
                   <div className="flex flex-col gap-2">
-                    <a href="mailto:hajdu.zsolt@ghajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
+                    <a href="mailto:hajdu.zsolt@hajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
                       <Mail size={16} /> hajdu.zsolt@hajdu.hu
                     </a>
                     <a href="tel:+36209294317" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
@@ -206,7 +206,7 @@ export default function Home() {
                 <div className="group p-5 bg-white dark:bg-slate-800/40 rounded-2xl border-t-4 border-slate-400 dark:border-slate-600 flex flex-col items-center text-center transition-all hover:shadow-xl shadow-md">
                   <h4 className="text-lg font-black text-slate-900 dark:text-slate-300 mb-3">Hajdú Tamás</h4>
                   <div className="flex flex-col gap-2">
-                    <a href="mailto:hajdu.tamas@ghajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
+                    <a href="mailto:hajdu.tamas@hajdu.hu" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
                       <Mail size={16} /> hajdu.tamas@hajdu.hu
                     </a>
                     <a href="tel:+36209293964" className="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm">
