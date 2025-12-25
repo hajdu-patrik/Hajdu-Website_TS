@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 
-# Hajdú Közmű Kft. | Corporate Web Engineering
+# Custom Website for Hajdú Közmű Kft.
 
 This repository contains the source code for the official corporate platform of **Hajdú Közmű Kft.**, a leading firm specializing in utility construction and water management infrastructure. 
 
