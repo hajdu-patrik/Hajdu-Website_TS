@@ -194,7 +194,7 @@ export default function Home() {
 
       {/* TÉRKÉP */}
       <section className="w-full h-[450px] overflow-hidden">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.3032768560384!2d19.04353457688229!3d47.54245649175225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d9600f7b020b%3A0xc665191d9272338b!2zQnVkYXBlc3QsIENzaWvDs3MgdTEzLCAxMDMz!5e0!3m2!1shu!2shu!4v1735122150000!5m2!1shu!2shu" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Hajdú Közmű Kft. budapesti telephelye"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.3417182387116!2d19.03750551323127!3d47.561139371065536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d97597c972f9%3A0x26f72e1a36a085dc!2sBudapest%2C%20Csik%C3%B3s%20u.%2013%2C%201033!5e0!3m2!1shu!2shu!4v1766756980136!5m2!1shu!2shu" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Hajdú Közmű Kft. budapesti telephelye"
           className="opacity-90 grayscale hover:grayscale-0 dark:invert-[0.9] dark:hue-rotate-180 transition-all duration-700">
         </iframe>
       </section>

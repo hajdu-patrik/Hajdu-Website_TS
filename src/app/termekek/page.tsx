@@ -21,7 +21,7 @@ export default function TermekekPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-32 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
+    <main className="min-h-screen pt-32 pb-24 md:pb-12 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-slate-900 dark:text-white">

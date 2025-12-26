@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion"; // Animációkhoz
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,22 @@ export default function Navbar() {
 
   useEffect(() => setMounted(true), []);
 
+  // GÖRGETÉS TILTÁSA: Amikor a menü nyitva van, a háttér nem görgethető
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    // Cleanup funkció, ha a komponens megsemmisülne
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-    setIsOpen(false);
+    setIsOpen(false); 
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -70,7 +84,7 @@ export default function Navbar() {
               key={item.name} 
               href={item.href} 
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold uppercase text-xs tracking-[0.2em]"
+              className="text-slate-600 dark:text-slate-300 hover:text-[#0606ff] dark:hover:text-[#00ffff] font-bold uppercase text-xs tracking-[0.2em] transition-colors"
             >
               {item.name}
             </Link>
@@ -78,7 +92,7 @@ export default function Navbar() {
           
           <button 
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-800 dark:text-yellow-400"
+            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-800 dark:text-yellow-400 hover:scale-110 transition-all"
           >
             {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
           </button>
@@ -93,48 +107,53 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBIL MENÜ OVERLAY */}
-      {isOpen && (
-        <div className="fixed inset-0 w-full h-screen bg-white dark:bg-slate-900 z-[120] lg:hidden overflow-hidden flex flex-col transition-all duration-300">
-          
-          <div className="flex flex-col items-center justify-center flex-grow gap-8 px-6">
-            {menuItems.map((item) => (
-              <Link 
-                key={item.name} 
-                href={item.href} 
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="text-3xl font-black uppercase tracking-tighter text-slate-900 dark:text-white"
+      {/* MOBIL MENÜ OVERLAY ANIMÁCIÓVAL */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-0 w-full h-screen bg-white dark:bg-slate-900 z-[120] lg:hidden overflow-hidden flex flex-col"
+          >
+            <div className="flex flex-col items-center justify-center flex-grow gap-8 px-6">
+              {menuItems.map((item) => (
+                <Link 
+                  key={item.name} 
+                  href={item.href} 
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-3xl font-black uppercase tracking-tighter text-slate-900 dark:text-white hover:text-[#0606ff] dark:hover:text-[#00ffff]"
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              <div className="w-full h-[1px] bg-slate-100 dark:bg-slate-800 my-4" />
+
+              {/* Mobil Téma Váltó */}
+              <button 
+                onClick={toggleTheme}
+                className="flex items-center gap-4 px-10 py-5 bg-slate-900 dark:bg-slate-800 rounded-2xl w-full max-w-xs justify-center font-black uppercase text-sm tracking-widest shadow-lg active:scale-95 transition-all text-slate-100"
               >
-                {item.name}
-              </Link>
-            ))}
+                {mounted && (
+                  <>
+                    {theme === "dark" ? <Sun className="text-yellow-400" /> : <Moon className="text-[#00ffff]" />}
+                    <span className="text-slate-100">{theme === "dark" ? "Világos Mód" : "Sötét Mód"}</span>
+                  </>
+                )}
+              </button>
 
-            <div className="w-full h-[1px] bg-slate-100 dark:bg-slate-800 my-4" />
-
-            {/* Mobil Téma Váltó */}
-            <button 
-              onClick={toggleTheme}
-              className="flex items-center gap-4 px-10 py-5 bg-slate-800 dark:bg-slate-800 rounded-2xl w-full max-w-xs justify-center font-black uppercase text-sm tracking-widest shadow-lg active:scale-95 transition-all text-slate-100"
-            >
-
-              {mounted && (
-                <>
-                  {theme === "dark" ? <Sun className="text-yellow-400" /> : <Moon className="text-blue-600" />}
-                  <span>{theme === "dark" ? "Világos Mód" : "Sötét Mód"}</span>
-                </>
-              )}
-            </button>
-
-            {/* Bezárás gomb alul */}
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="mt-8 flex items-center gap-2 text-slate-400 font-bold uppercase text-xs tracking-[0.3em] hover:text-red-500 transition-colors"
-            >
-              <X size={16} /> Csak kilépés
-            </button>
-          </div>
-        </div>
-      )}
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="mt-8 flex items-center gap-2 text-slate-400 font-bold uppercase text-xs tracking-[0.3em] hover:text-red-500 transition-colors"
+              >
+                <X size={16} /> Csak kilépés
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
