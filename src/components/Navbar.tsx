@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { motion, AnimatePresence } from "framer-motion"; // Animációkhoz
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => setMounted(true), []);
 
-  // GÖRGETÉS TILTÁSA: Amikor a menü nyitva van, a háttér nem görgethető
+  // GÖRGETÉS TILTÁSA:
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -68,7 +68,7 @@ export default function Navbar() {
         <Link href="/" className="relative z-[130]" onClick={() => setIsOpen(false)}>
           <div className="relative w-40 h-10 md:w-56 md:h-16">
             <Image 
-              src="/logo.webp" 
+              src="/Logo.webp"
               alt="Hajdú Közmű Logo" 
               fill 
               className="object-contain object-left dark:brightness-110" 
