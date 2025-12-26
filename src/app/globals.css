@@ -3,44 +3,39 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Alapszínek definiálása */
-  --color-brand-blue: #2563eb;
-  --color-brand-soft: #f8fafc;
-  
-  /* Sötét mód színei (amiket már szeretsz) */
-  --color-dark-surface: #0f172a; /* slate-900 */
-  --color-dark-card: #1e293b;    /* slate-800 */
+  /* MÁRKASZÍNEK DEFINIÁLÁSA */
+  --color-brand-cyan: #00ffff;
+  --color-brand-blue: #0606ff;
+  --color-brand-blue-deep: #020244;
 }
 
 @layer base {
   :root {
-    /* VILÁGOS MÓD - Lágyabb, halványabb beállítások */
-    --site-bg: #fdfbf7;           /* Krém alapszín */
-    --section-hero-bg: #f1f5f9;   /* Nagyon halvány kékesszürke a hero-nak */
-    --text-main: #0f172a;         /* Sötétkék szöveg */
-    --text-accent: #2563eb;       /* Erősebb kék a fehér háttéren az olvashatóságért */
-    --card-bg: #ffffff;
-    --card-border: #e2e8f0;
+    /* VILÁGOS MÓD */
+    --site-bg: #f8fafc;
+    --section-hero-bg: #e0f2fe;
+    --text-main: #0606ff;
+    --text-accent: #0606ff;
+    --brand-glow: rgba(0, 255, 255, 0.2);
   }
 
   .dark {
-    /* SÖTÉT MÓD - A bevált beállítások */
-    --site-bg: #1a1a1a;
-    --section-hero-bg: #0f172a;   /* A mély sötétkék, ami tetszett */
-    --text-main: #fdfbf7;
-    --text-accent: #60a5fa;       /* Világosabb kék (blue-400) a sötét háttéren */
-    --card-bg: #262626;
-    --card-border: #334155;
+    /* SÖTÉT MÓD */
+    --site-bg: #020617;
+    --section-hero-bg: #04044d;
+    --text-main: #f8fafc;
+    --text-accent: #00ffff;
+    --brand-glow: rgba(0, 255, 255, 0.4);
+  }
+
+  body {
+    background-color: var(--site-bg);
+    color: var(--text-main);
+    transition: background-color 0.5s, color 0.5s;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-  
-  body {
-    background-color: var(--site-bg);
-    color: var(--text-main);
-    transition: background-color 0.3s, color 0.3s;
   }
 
   img {

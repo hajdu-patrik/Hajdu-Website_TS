@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
@@ -11,13 +13,13 @@ export default function RolunkPage() {
   ];
 
   return (
-    <main className="min-h-screen py-20 px-6 text-slate-900 dark:text-white transition-colors duration-500">
+    <main className="min-h-screen pt-20 pb-32 px-6 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-black mb-12 tracking-tighter uppercase text-center md:text-left">Rólunk</h1>
         
         <div className="mb-20 space-y-6">
-          <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">Hajdú Közmű Kft.</p>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg italic border-l-4 border-blue-600 pl-6">
+          <p className="text-2xl font-bold text-[#0606ff] dark:text-[#00ffff]">Hajdú Közmű Kft.</p>
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg italic border-l-4 border-[#0606ff] dark:border-[#00ffff] pl-6">
             Vállalkozásunk 2004-ben alakult. Alapítóink Budapest ivóvízellátásában és csatornázásában szereztek több évtizedes szakmai tapasztalatot.
           </p>
         </div>
@@ -26,7 +28,7 @@ export default function RolunkPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
           {activities.map((item) => (
             <div key={item} className="flex items-center gap-3 bg-white dark:bg-slate-800/40 backdrop-blur-md p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-sm">
-              <CheckCircle2 className="text-blue-600 dark:text-blue-400 shrink-0" size={24} />
+              <CheckCircle2 className="text-[#0606ff] dark:text-[#00ffff] shrink-0" size={24} />
               <span className="text-base font-bold text-slate-700 dark:text-slate-200">{item}</span>
             </div>
           ))}
@@ -35,14 +37,14 @@ export default function RolunkPage() {
         <h2 className="text-3xl font-black mb-12 uppercase text-center tracking-tighter">Fotóválogatás munkáinkról</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
            {[1, 2, 3, 4, 5, 6].map((i) => (
-             <div key={i} className="relative aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700 group">
+             <div key={i} className="relative aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 group">
                 <Image 
                   src={`/rolunk/FotovalogatasMunkainkrol${i}.webp`} 
                   alt={`Munkafolyamat ${i}`} 
                   fill 
                   className="object-cover transition-transform duration-500 group-hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-[#0606ff]/10 dark:bg-[#00ffff]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
              </div>
            ))}
         </div>

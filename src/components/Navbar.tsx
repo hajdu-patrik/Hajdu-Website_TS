@@ -16,6 +16,11 @@ export default function Navbar() {
 
   useEffect(() => setMounted(true), []);
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+    setIsOpen(false);
+  };
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.includes("#")) {
       const id = href.split("#")[1];
@@ -25,12 +30,12 @@ export default function Navbar() {
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          element.scrollIntoView({ behavior: "smooth" });
           globalThis.history.pushState(null, "", href);
         }
       }
-      setIsOpen(false);
     }
+    setIsOpen(false);
   };
 
   const menuItems = [
@@ -42,56 +47,92 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="relative bg-cream dark:bg-dark-bg border-b border-gray-100 dark:border-gray-800 h-24 flex items-center z-[50]">
+    <nav className="sticky top-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-24 flex items-center z-[100] transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full flex justify-between items-center">
-          <Link href="/" className="flex items-center group">
-            <div className="relative w-64 h-32 md:w-70 md:h-40 transition-transform group-hover:scale-105">
-              <Image 
-                src="/Logo.webp"
-                alt="Hajdú Közmű Kft. Logó"
-                fill
-                className="object-contain object-left"
-                priority
-              />
-            </div>
-          </Link>
+        
+        {/* LOGO */}
+        <Link href="/" className="relative z-[130]" onClick={() => setIsOpen(false)}>
+          <div className="relative w-40 h-10 md:w-56 md:h-16">
+            <Image 
+              src="/logo.webp" 
+              alt="Hajdú Közmű Logo" 
+              fill 
+              className="object-contain object-left dark:brightness-110" 
+              priority 
+            />
+          </div>
+        </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
+        {/* DESKTOP MENU */}
+        <div className="hidden lg:flex items-center gap-8">
           {menuItems.map((item) => (
             <Link 
               key={item.name} 
               href={item.href} 
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-slate-600 dark:text-gray-300 hover:text-blue-600 font-semibold uppercase text-sm tracking-widest"
+              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold uppercase text-xs tracking-[0.2em]"
             >
               {item.name}
             </Link>
           ))}
-          <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full text-slate-800 dark:text-yellow-400">
+          
+          <button 
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-800 dark:text-yellow-400"
+          >
             {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
           </button>
         </div>
 
-        {/* Mobile Button */}
-        <button className="lg:hidden p-2 text-slate-900 dark:text-white" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+        {/* MOBIL HAMBURGER GOMB */}
+        <button 
+          className="lg:hidden relative z-[130] p-2 text-slate-900 dark:text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={40} /> : <Menu size={40} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBIL MENÜ OVERLAY */}
       {isOpen && (
-        <div className="lg:hidden absolute top-24 left-0 w-full h-[calc(100vh-6rem)] bg-cream dark:bg-dark-bg z-[100] flex flex-col items-center justify-center gap-8">
-          {menuItems.map((item) => (
-            <Link 
-              key={item.name} 
-              href={item.href} 
-              onClick={(e) => handleNavClick(e, item.href)}
-              className="text-3xl font-bold"
+        <div className="fixed inset-0 w-full h-screen bg-white dark:bg-slate-900 z-[120] lg:hidden overflow-hidden flex flex-col transition-all duration-300">
+          
+          <div className="flex flex-col items-center justify-center flex-grow gap-8 px-6">
+            {menuItems.map((item) => (
+              <Link 
+                key={item.name} 
+                href={item.href} 
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-3xl font-black uppercase tracking-tighter text-slate-900 dark:text-white"
+              >
+                {item.name}
+              </Link>
+            ))}
+
+            <div className="w-full h-[1px] bg-slate-100 dark:bg-slate-800 my-4" />
+
+            {/* Mobil Téma Váltó */}
+            <button 
+              onClick={toggleTheme}
+              className="flex items-center gap-4 px-10 py-5 bg-slate-800 dark:bg-slate-800 rounded-2xl w-full max-w-xs justify-center font-black uppercase text-sm tracking-widest shadow-lg active:scale-95 transition-all text-slate-100"
             >
-              {item.name}
-            </Link>
-          ))}
+
+              {mounted && (
+                <>
+                  {theme === "dark" ? <Sun className="text-yellow-400" /> : <Moon className="text-blue-600" />}
+                  <span>{theme === "dark" ? "Világos Mód" : "Sötét Mód"}</span>
+                </>
+              )}
+            </button>
+
+            {/* Bezárás gomb alul */}
+            <button 
+              onClick={() => setIsOpen(false)}
+              className="mt-8 flex items-center gap-2 text-slate-400 font-bold uppercase text-xs tracking-[0.3em] hover:text-red-500 transition-colors"
+            >
+              <X size={16} /> Csak kilépés
+            </button>
+          </div>
         </div>
       )}
     </nav>

@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop"; // Importálás ellenőrzése
+import ScrollToTop from "@/components/ScrollToTop";
 import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,10 +28,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          
-          {/* EZT ELLENŐRIZD: Itt kell lennie, nem a page.tsx-ben! */}
-          <ScrollToTop /> 
-          
+          <ScrollToTop />    
         </ThemeProvider>
       </body>
     </html>

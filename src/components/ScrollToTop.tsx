@@ -33,17 +33,13 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, y: 20, scale: 0.8 }}
           onClick={() => globalThis.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-8 right-8 z-[100] p-4 
-            bg-blue-600/90 dark:bg-blue-500/20 
-            backdrop-blur-md
-            border border-blue-400/30 dark:border-blue-400/20
-            text-white dark:text-blue-400 
-            rounded-2xl 
-            shadow-[0_0_20px_rgba(37,99,235,0.3)] 
-            hover:bg-blue-700 dark:hover:bg-blue-500/30 
-            hover:scale-110 active:scale-95
-            transition-all duration-300 group"
-          aria-label="Vissza a tetejére"
-        >
+              bg-brand-blue dark:bg-brand-cyan/20 
+              backdrop-blur-md
+              border border-brand-blue/30 dark:border-brand-cyan/50
+              text-white dark:text-brand-cyan 
+              rounded-2xl 
+              shadow-[0_0_20px_rgba(0,255,255,0.4)]"
+          >
           <ChevronUp 
             size={28} 
             strokeWidth={3} 
