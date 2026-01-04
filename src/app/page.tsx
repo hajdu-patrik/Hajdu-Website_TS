@@ -135,68 +135,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-            
-      {/* KAPCSOLAT */}
-      <section id="kapcsolat" className="pt-24 pb-30 px-6 transition-colors duration-500 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black mb-20 text-center uppercase tracking-tighter text-slate-800 dark:text-white">
-            Kapcsolat
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-            {/* TELEPHELY */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full">
-              <h3 className="text-3xl font-bold mb-10 flex items-center justify-center lg:justify-start gap-4 text-[#0606ff] dark:text-[#00ffff] w-full">
-                <MapPin size={40} className="shrink-0" /> Telephelyünk
-              </h3>
-              <p className="text-2xl mb-12 text-[#0666ff] dark:text-blue-200 font-bold">1033 Budapest, Csikós u. 13-15.</p>
-              <div className="space-y-4 w-full max-w-md mx-auto lg:mx-0 bg-slate-50 dark:bg-slate-800/20 p-7 rounded-2xl border border-1.5 border-slate-200 dark:border-slate-800">
-                <div className="flex justify-between border-b border-slate-200 dark:border-slate-700 pb-3"><span className="text-slate-600 dark:text-slate-400 font-medium">Hétfő - Csütörtök</span><span className="font-bold text-[#0606ff] dark:text-white">07:00 - 16:00</span></div>
-                <div className="flex justify-between border-b border-slate-200 dark:border-slate-700 pb-2"><span className="text-slate-600 dark:text-slate-400 font-medium">Péntek</span><span className="font-bold text-[#0606ff] dark:text-white">07:00 - 15:00</span></div>
-                <div className="flex justify-between pb-2 text-slate-400 dark:text-slate-500"><span className="font-medium">Szombat - Vasárnap</span><span className="font-bold uppercase tracking-widest text-xs">Zárva</span></div>
-              </div>
-            </div>
-
-            {/* ÜGYVEZETŐK */}
-            <div className="flex flex-col items-center lg:items-start w-full mt-10 lg:mt-0">
-              <h3 className="text-2xl font-bold mb-6 uppercase tracking-widest text-slate-500 dark:text-white text-center lg:text-left w-full">Ügyvezetőink</h3>
-              <div className="grid grid-cols-1 gap-6 w-full max-w-md mx-auto lg:mx-0">
-                {/* Hajdú Zsolt */}
-                <div className="group p-4 bg-white dark:bg-slate-800/40 rounded-3xl border-l-8 border-[#00ffff] flex flex-col items-center lg:items-start text-center lg:text-left transition-all hover:shadow-2xl shadow-lg">
-                  <h4 className="text-xl font-black text-slate-900 dark:text-white mb-4">Hajdú Zsolt</h4>
-                  <div className="flex flex-col gap-3">
-                    <a href="mailto:hajdu.zsolt@hajdu.hu" className="flex items-center justify-center lg:justify-start gap-3 hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">
-                      <Mail size={18} className="text-[#0606ff] dark:text-[#00ffff]" /> <span className="font-medium">hajdu.zsolt@hajdu.hu</span>
-                    </a>
-                    <a href="tel:+36209294317" className="flex items-center justify-center lg:justify-start gap-3 hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">
-                      <Phone size={18} className="text-[#0606ff] dark:text-[#00ffff]" /> <span className="font-medium">+36 20 929 4317</span>
-                    </a>
-                  </div>
-                </div>
-                {/* Hajdú Tamás */}
-                <div className="group p-4 bg-white dark:bg-slate-800/40 rounded-3xl border-l-8 border-slate-400 dark:border-slate-600 flex flex-col items-center lg:items-start text-center lg:text-left transition-all hover:shadow-2xl shadow-lg">
-                  <h4 className="text-xl font-black text-slate-900 dark:text-white mb-4">Hajdú Tamás</h4>
-                  <div className="flex flex-col gap-3">
-                    <a href="mailto:hajdu.tamas@hajdu.hu" className="flex items-center justify-center lg:justify-start gap-3 hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">
-                      <Mail size={18} className="text-slate-400 dark:text-slate-300" /> <span className="font-medium">hajdu.tamas@hajdu.hu</span>
-                    </a>
-                    <a href="tel:+36209293964" className="flex items-center justify-center lg:justify-start gap-3 hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">
-                      <Phone size={18} className="text-slate-400 dark:text-slate-300" /> <span className="font-medium">+36 20 929 3964</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TÉRKÉP */}
       <section className="w-full h-[450px] overflow-hidden">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.3417182387116!2d19.03750551323127!3d47.561139371065536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d97597c972f9%3A0x26f72e1a36a085dc!2sBudapest%2C%20Csik%C3%B3s%20u.%2013%2C%201033!5e0!3m2!1shu!2shu!4v1766756980136!5m2!1shu!2shu" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Hajdú Közmű Kft. budapesti telephelye"
-          className="opacity-90 grayscale hover:grayscale-0 dark:invert-[0.9] dark:hue-rotate-180 transition-all duration-700">
-        </iframe>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.3417182387116!2d19.03750551323127!3d47.561139371065536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d97597c972f9%3A0x26f72e1a36a085dc!2sBudapest%2C%20Csik%C3%B3s%20u.%2013%2C%201033!5e0!3m2!1shu!2shu!4v1766756980136!5m2!1shu!2shu" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade" 
+          title="Hajdú Közmű Kft. budapesti telephelye"
+          className="opacity-90 grayscale hover:grayscale-0 dark:invert-[0.9] dark:hue-rotate-180 transition-all duration-700"
+        />
       </section>
     </main>
   );

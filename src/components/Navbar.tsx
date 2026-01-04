@@ -57,7 +57,6 @@ export default function Navbar() {
     { name: "Rólunk", href: "/rolunk" },
     { name: "Termékek", href: "/termekek" },
     { name: "Pályázatok", href: "/palyazatok" },
-    { name: "Kapcsolat", href: "/#kapcsolat" },
   ];
 
   return (

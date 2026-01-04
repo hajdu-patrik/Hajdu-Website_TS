@@ -13,7 +13,7 @@ export default function RolunkPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-20 pb-32 px-6 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
+    <main className="min-h-screen pt-20 pb-12 px-6 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-black mb-12 tracking-tighter uppercase text-center md:text-left">Rólunk</h1>
         
@@ -35,14 +35,14 @@ export default function RolunkPage() {
         </div>
 
         <h2 className="text-3xl font-black mb-12 uppercase text-center tracking-tighter">Fotóválogatás munkáinkról</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
            {[1, 2, 3, 4, 5, 6].map((i) => (
              <div key={i} className="relative aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 group">
                 <Image 
                   src={`/rolunk/FotovalogatasMunkainkrol${i}.webp`} 
                   alt={`Munkafolyamat ${i}`} 
                   fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-[#0606ff]/10 dark:bg-[#00ffff]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
              </div>

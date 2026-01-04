@@ -31,19 +31,25 @@ export default function ScrollToTop() {
           initial={{ opacity: 0, y: 20, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.8 }}
+          // INTERAKTÍV ANIMÁCIÓK: Emelkedés és nagyítás hoverre
+          whileHover={{ scale: 1.1, y: -5 }}
+          whileTap={{ scale: 0.9 }}
           onClick={() => globalThis.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-8 right-8 z-[100] p-4 
-              bg-brand-blue dark:bg-brand-cyan/20 
+              bg-[#0606ff] dark:bg-[#00ffff]/10 
               backdrop-blur-md
-              border border-brand-blue/30 dark:border-brand-cyan/50
-              text-white dark:text-brand-cyan 
+              border border-[#0606ff]/30 dark:border-[#00ffff]/40
+              text-white dark:text-[#00ffff] 
               rounded-2xl 
-              shadow-[0_0_20px_rgba(0,255,255,0.4)]"
-          >
+              transition-colors duration-300
+              /* DINAMIKUS ÁRNYÉK: Kék világos módban, Cián ragyogás sötétben */
+              shadow-xl shadow-[#0606ff]/20 
+              dark:shadow-[0_0_30px_rgba(0,255,255,0.3)]"
+          aria-label="Vissza az oldal tetejére"
+        >
           <ChevronUp 
             size={28} 
             strokeWidth={3} 
-            className="group-hover:-translate-y-1 transition-transform duration-300" 
           />
         </motion.button>
       )}
