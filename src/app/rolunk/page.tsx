@@ -13,7 +13,7 @@ export default function RolunkPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-20 pb-12 px-6 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
+    <main className="min-h-screen pt-30 pb-24 md:pb-50 px-6 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-black mb-12 tracking-tighter uppercase text-center md:text-left">Rólunk</h1>
         

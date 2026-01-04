@@ -5,7 +5,7 @@ import { Award, Percent } from "lucide-react";
 
 export default function PalyazatokPage() {
   return (
-    <main className="min-h-screen pt-20 pb-30 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
+    <main className="min-h-screen pt-30 pb-24 md:pb-50 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-black mb-16 text-center uppercase tracking-tighter text-slate-900 dark:text-white">Pályázatok</h1>
         
