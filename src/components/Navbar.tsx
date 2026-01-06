@@ -83,7 +83,7 @@ export default function Navbar() {
               key={item.name} 
               href={item.href} 
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-slate-600 dark:text-slate-300 hover:text-[#0606ff] dark:hover:text-[#00ffff] font-bold uppercase text-xs tracking-[0.2em] transition-colors"
+              className="text-slate-600 dark:text-slate-300 hover:text-[#0001f9] dark:hover:text-[#00ffff] font-bold uppercase text-xs tracking-[0.2em] transition-colors"
             >
               {item.name}
             </Link>
@@ -122,7 +122,7 @@ export default function Navbar() {
                   key={item.name} 
                   href={item.href} 
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-3xl font-black uppercase tracking-tighter text-slate-900 dark:text-white hover:text-[#0606ff] dark:hover:text-[#00ffff]"
+                  className="text-3xl font-black uppercase tracking-tighter text-slate-900 dark:text-white hover:text-[#0001f9] dark:hover:text-[#00ffff]"
                 >
                   {item.name}
                 </Link>

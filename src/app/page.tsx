@@ -58,12 +58,12 @@ export default function Home() {
               Hajdú Közmű Kft.
             </h1>
             {/* Tagline Királykék/Cián színben */}
-            <p className="text-[#0606ff] dark:text-[#00ffff] text-xl font-bold uppercase tracking-[0.4em] mb-10">
+            <p className="text-[#0001f9] dark:text-[#00ffff] text-xl font-bold uppercase tracking-[0.4em] mb-10">
               Garantált elégedettség
             </p>
             <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-16 max-w-3xl mx-auto font-light">
               Minden projektet a megérdemelt tisztelettel kezelünk. <br />
-              <span className="font-semibold text-[#0606ff] dark:text-[#00ffff]/80">Közműépítés mesterfokon.</span>
+              <span className="font-semibold text-[#0001f9] dark:text-[#00ffff]/80">Közműépítés mesterfokon.</span>
             </p>
           </motion.div>
           
@@ -72,7 +72,7 @@ export default function Home() {
               <div key={text} className="group flex items-start gap-4 p-6 rounded-2xl transition-all duration-300
                 bg-white dark:bg-slate-800/40 backdrop-blur-md border border-slate-200 dark:border-[#00ffff]/20 shadow-md dark:shadow-[#00ffff]/5">
                 {/* Ikonok a márkaszínekben */}
-                <div className="p-2 bg-[#0606ff]/10 dark:bg-[#00ffff]/20 rounded-lg text-[#0606ff] dark:text-[#00ffff]">
+                <div className="p-2 bg-[#0001f9]/10 dark:bg-[#00ffff]/20 rounded-lg text-[#0001f9] dark:text-[#00ffff]">
                   <CheckCircle size={24} />
                 </div>
                 <span className="font-bold text-base text-slate-800 dark:text-slate-100">{text}</span>
@@ -85,7 +85,7 @@ export default function Home() {
       {/* PARTNEREINK - Infinity Slider */}
       <section className="py-16 bg-white dark:bg-[#020617] border-y border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-[#0606ff] dark:text-[#00ffff] text-center">
+          <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-[#0001f9] dark:text-[#00ffff] text-center">
             Akikkel együtt dolgozunk
           </h2>
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl md:text-4xl font-black text-slate-300 dark:text-slate-700 uppercase tracking-tighter hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-all duration-300 cursor-pointer select-none no-underline"
+                className="text-2xl md:text-4xl font-black text-slate-300 dark:text-slate-700 uppercase tracking-tighter hover:text-[#0001f9] dark:hover:text-[#00ffff] transition-all duration-300 cursor-pointer select-none no-underline"
               >
                 {partner.name}
               </a>
@@ -129,7 +129,7 @@ export default function Home() {
               <div key={num} className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group bg-slate-200 dark:bg-slate-800 border border-slate-100 dark:border-slate-800">
                 <Image src={`/projektek/LegutobbiProjektek${num}.webp`} alt={`Referencia munka ${num}`} fill className="object-cover transition-transform duration-700 group-hover:scale-110" draggable="false" />
                 {/* Márkakék/Cián overlay hoverre */}
-                <div className="absolute inset-0 bg-[#0606ff]/10 dark:bg-[#00ffff]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[#0001f9]/10 dark:bg-[#00ffff]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -147,7 +147,6 @@ export default function Home() {
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade" 
           title="Hajdú Közmű Kft. budapesti telephelye"
-          className="opacity-90 grayscale hover:grayscale-0 dark:invert-[0.9] dark:hue-rotate-180 transition-all duration-700"
         />
       </section>
     </main>

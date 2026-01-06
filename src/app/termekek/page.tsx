@@ -21,7 +21,7 @@ export default function TermekekPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-30 pb-24 md:pb-12 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
+    <main className="min-h-screen pt-30 pb-24 md:pb-50 px-6 bg-slate-50 dark:bg-[#020617] transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-slate-900 dark:text-white">
@@ -36,7 +36,7 @@ export default function TermekekPage() {
           {products.map((product) => (
             <div 
               key={product.id} 
-              className="flex flex-col h-full group bg-white dark:bg-slate-800/40 backdrop-blur-md p-4 rounded-[2.5rem] border border-slate-200 dark:border-[#00ffff]/10 transition-all duration-500 hover:shadow-2xl hover:border-[#0606ff] dark:hover:border-[#00ffff]"
+              className="flex flex-col h-full group bg-white dark:bg-slate-800/40 backdrop-blur-md p-4 rounded-[2.5rem] border border-slate-200 dark:border-[#00ffff]/10 transition-all duration-500 hover:shadow-2xl hover:border-[#0001f9] dark:hover:border-[#00ffff]"
             >
               <div className="h-80 relative rounded-[2rem] overflow-hidden mb-8 bg-slate-100 dark:bg-slate-900 shrink-0">
                 <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" draggable="false" />
@@ -50,7 +50,7 @@ export default function TermekekPage() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="mt-auto block w-full py-5 rounded-2xl font-black uppercase text-sm tracking-widest transition-all text-center shadow-lg
-                    bg-[#0606ff] text-white hover:bg-[#0505e0] shadow-[#0606ff]/20
+                    bg-[#0001f9] text-white hover:bg-[#0505e0] shadow-[#0001f9]/20
                     dark:bg-[#00ffff] dark:text-slate-950 dark:hover:bg-[#00e6e6] dark:shadow-[#00ffff]/20"
                 >
                   Ajánlatot kérek

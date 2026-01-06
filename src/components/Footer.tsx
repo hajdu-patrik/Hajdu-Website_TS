@@ -71,13 +71,13 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="border-l-2 border-[#0606ff] dark:border-[#00ffff] pl-4">
               <p className="text-sm font-black text-slate-900 dark:text-white">Hajdú Zsolt</p>
-              <a href="mailto:hajdu.zsolt@ghajdu.hu" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.zsolt@ghajdu.hu</a>
-              <a href="tel:+36209294317" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 4317</a>
+              <a href="mailto:hajdu.zsolt@hajdu.hu" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.zsolt@hajdu.hu</a>
+              <a href="tel:+36209294317" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 4317</a>
             </div>
             <div className="border-l-2 border-slate-300 dark:border-slate-700 pl-4">
               <p className="text-sm font-black text-slate-900 dark:text-white">Hajdú Tamás</p>
-              <a href="mailto:hajdu.tamas@ghajdu.hu" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.tamas@ghajdu.hu</a>
-              <a href="tel:+36209293964" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 3964</a>
+              <a href="mailto:hajdu.tamas@hajdu.hu" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.tamas@hajdu.hu</a>
+              <a href="tel:+36209293964" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 3964</a>
             </div>
           </div>
         </div>

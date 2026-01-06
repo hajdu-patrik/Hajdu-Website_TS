@@ -15,14 +15,14 @@ export default function PalyazatokPage() {
             <Image src="/palyazatok/Palyazat.webp" alt="Pályázati gép" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 to-transparent"></div>
             <div className="absolute bottom-8 left-8">
-               <span className="bg-[#0606ff] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Sikeres projekt</span>
+               <span className="bg-[#0001f9] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Sikeres projekt</span>
             </div>
           </div>
 
           <div className="p-8 md:p-12 space-y-10">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <div className="space-y-2">
-                <span className="text-[#0606ff] dark:text-[#00ffff] font-bold text-sm uppercase tracking-widest">Projekt címe</span>
+                <span className="text-[#0001f9] dark:text-[#00ffff] font-bold text-sm uppercase tracking-widest">Projekt címe</span>
                 <p className="text-2xl md:text-3xl font-black leading-tight text-slate-800 dark:text-white">Hajdú Közmű Kft. technológiai megújulása</p>
               </div>
               <div className="space-y-1 md:text-right shrink-0">
@@ -34,7 +34,7 @@ export default function PalyazatokPage() {
             {/* Támogatás összege */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-6 bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl flex items-center gap-5 border border-slate-200 dark:border-slate-700/50">
-                <div className="p-4 bg-[#0606ff] dark:bg-[#00ffff] text-white dark:text-slate-950 rounded-2xl shadow-lg dark:shadow-[#00ffff]/30">
+                <div className="p-4 bg-[#0001f9] dark:bg-[#00ffff] text-white dark:text-slate-950 rounded-2xl shadow-lg dark:shadow-[#00ffff]/30">
                    <Award size={32} />
                 </div>
                 <div>
@@ -45,7 +45,7 @@ export default function PalyazatokPage() {
 
               {/* Támogatás mértéke */}
               <div className="p-6 bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl flex items-center gap-5 border border-slate-200 dark:border-slate-700/50">
-                <div className="p-4 bg-[#0606ff]/90 dark:bg-[#00ffff]/90 text-white dark:text-slate-950 rounded-2xl shadow-lg dark:shadow-[#00ffff]/30">
+                <div className="p-4 bg-[#0001f9]/90 dark:bg-[#00ffff]/90 text-white dark:text-slate-950 rounded-2xl shadow-lg dark:shadow-[#00ffff]/30">
                    <Percent size={32} />
                 </div>
                 <div>
@@ -56,14 +56,14 @@ export default function PalyazatokPage() {
             </div>
 
             <div className="prose dark:prose-invert max-w-none">
-              <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-white border-l-4 border-[#0606ff] dark:border-[#00ffff] pl-4">A projekt tartalma</h3>
+              <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-white border-l-4 border-[#0001f9] dark:border-[#00ffff] pl-4">A projekt tartalma</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
                 A pályázat keretén belül beszerzett modern eszközök üzembiztosak, mérsékelten környezetszennyezőek és alacsony üzemeltetési költséggel rendelkeznek...
               </p>
             </div>
 
             <div className="pt-8 border-t border-slate-100 dark:border-slate-700 flex flex-col sm:flex-row justify-between gap-4 text-sm font-mono text-slate-500">
-              <div>Azonosító: <span className="font-bold text-[#0606ff] dark:text-[#00ffff]">VEKOP-1.2.6-20-2020-01551</span></div>
+              <div>Azonosító: <span className="font-bold text-[#0001f9] dark:text-[#00ffff]">VEKOP-1.2.6-20-2020-01551</span></div>
               <div>Befejezés: <span className="font-bold text-slate-700 dark:text-slate-200">2021.10.27</span></div>
             </div>
           </div>

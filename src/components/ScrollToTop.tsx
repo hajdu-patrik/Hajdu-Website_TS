@@ -36,14 +36,14 @@ export default function ScrollToTop() {
           whileTap={{ scale: 0.9 }}
           onClick={() => globalThis.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-8 right-8 z-[100] p-4 
-              bg-[#0606ff] dark:bg-[#00ffff]/10 
+              bg-[#0001f9] dark:bg-[#00ffff]/10 
               backdrop-blur-md
-              border border-[#0606ff]/30 dark:border-[#00ffff]/40
+              border border-[#0001f9]/30 dark:border-[#00ffff]/40
               text-white dark:text-[#00ffff] 
               rounded-2xl 
               transition-colors duration-300
               /* DINAMIKUS ÁRNYÉK: Kék világos módban, Cián ragyogás sötétben */
-              shadow-xl shadow-[#0606ff]/20 
+              shadow-xl shadow-[#0001f9]/20 
               dark:shadow-[0_0_30px_rgba(0,255,255,0.3)]"
           aria-label="Vissza az oldal tetejére"
         >

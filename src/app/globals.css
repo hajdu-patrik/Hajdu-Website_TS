@@ -5,7 +5,7 @@
 @theme {
   /* MÁRKASZÍNEK DEFINIÁLÁSA */
   --color-brand-cyan: #00ffff;
-  --color-brand-blue: #0606ff;
+  --color-brand-blue: #0001f9;
   --color-brand-blue-deep: #020244;
 }
 
@@ -14,8 +14,8 @@
     /* VILÁGOS MÓD */
     --site-bg: #f8fafc;
     --section-hero-bg: #e0f2fe;
-    --text-main: #0606ff;
-    --text-accent: #0606ff;
+    --text-main: #0001f9;
+    --text-accent: #0001f9;
     --brand-glow: rgba(0, 255, 255, 0.2);
   }
 
@@ -39,8 +39,6 @@
   }
 
   img {
-    /* Az @apply select-none-t a linter nem szereti, de a Tailwind v4-nek így a legtisztább. 
-       A build-et nem zavarja. */
     @apply select-none;
     pointer-events: none;
     -webkit-user-drag: none;
