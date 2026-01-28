@@ -8,14 +8,14 @@ export default function TermekekPage() {
       id: "kerti-csap",
       title: "Fagymentes kerti csap",
       description: "Erőteljes öntöttvas csaptest, sárgaréz vízkifolyóval, rozsdaálló csapszárral. Megbízható megoldás minden kertbe, amely ellenáll a legkeményebb fagyoknak is.",
-      image: "/termekek/FagymentesKertiCsap.webp",
+      image: "/termekek/FagymentesKertiCsapTermek.webp",
       emailSubject: "Érdeklődés: Fagymentes kerti csap"
     },
     {
       id: "szivattyu",
       title: "Manuális kézi szivattyú",
       description: "Erős öntöttvas testtel és rozsdaálló csapszárral rendelkező kézi szivattyú. Ideális választás olyan helyekre, ahol nincs elektromos áram.",
-      image: "/termekek/FagymentesKertiKut.webp",
+      image: "/termekek/FagymentesKertiKutTermek.webp",
       emailSubject: "Érdeklődés: Manuális kézi szivattyú"
     }
   ];
@@ -38,8 +38,8 @@ export default function TermekekPage() {
               key={product.id} 
               className="flex flex-col h-full group bg-white dark:bg-slate-800/40 backdrop-blur-md p-4 rounded-[2.5rem] border border-slate-200 dark:border-[#00ffff]/10 transition-all duration-500 hover:shadow-2xl hover:border-[#0001f9] dark:hover:border-[#00ffff]"
             >
-              <div className="h-80 relative rounded-[2rem] overflow-hidden mb-8 bg-slate-100 dark:bg-slate-900 shrink-0">
-                <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" draggable="false" />
+              <div className="h-130 relative rounded-[2rem] overflow-hidden mb-8 bg-slate-100 dark:bg-slate-900 shrink-0">
+                <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" draggable="false" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
               </div>
 
               <div className="px-6 pb-6 flex flex-col flex-grow">

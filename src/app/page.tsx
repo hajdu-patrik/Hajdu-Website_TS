@@ -42,11 +42,10 @@ export default function Home() {
 
   return (
     <main>
-      {/* HERO SECTION - Új márkaszínekkel (Blue & Cyan) */}
+      {/* HERO SZEKCIÓ */}
       <section className="relative overflow-hidden min-h-[70vh] flex items-center py-24 px-6 
         bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white transition-colors duration-500">
         
-        {/* HÁTTÉR RAGYOGÁS: Cián (#00ffff) glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] 
             bg-[#00ffff]/10 dark:bg-[#00ffff]/15 blur-[120px] rounded-full" />
@@ -57,7 +56,6 @@ export default function Home() {
             <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
               Hajdú Közmű Kft.
             </h1>
-            {/* Tagline Királykék/Cián színben */}
             <p className="text-[#0001f9] dark:text-[#00ffff] text-xl font-bold uppercase tracking-[0.4em] mb-10">
               Garantált elégedettség
             </p>
@@ -71,7 +69,6 @@ export default function Home() {
             {advantages.map((text) => (
               <div key={text} className="group flex items-start gap-4 p-6 rounded-2xl transition-all duration-300
                 bg-white dark:bg-slate-800/40 backdrop-blur-md border border-slate-200 dark:border-[#00ffff]/20 shadow-md dark:shadow-[#00ffff]/5">
-                {/* Ikonok a márkaszínekben */}
                 <div className="p-2 bg-[#0001f9]/10 dark:bg-[#00ffff]/20 rounded-lg text-[#0001f9] dark:text-[#00ffff]">
                   <CheckCircle size={24} />
                 </div>
@@ -82,7 +79,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARTNEREINK - Infinity Slider */}
+      {/* PARTNEREINK SZEKCIÓ */}
       <section className="py-16 bg-white dark:bg-[#020617] border-y border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 mb-10">
           <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-[#0001f9] dark:text-[#00ffff] text-center">
@@ -114,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJEKTEK GALÉRIA */}
+      {/* PROJEK GALÉRIA SZEKCIÓ */}
       <section className="pt-32 pb-44 px-6 bg-white dark:bg-[#020617] transition-colors duration-500">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-4 text-slate-900 dark:text-white tracking-tighter uppercase">
@@ -128,7 +125,6 @@ export default function Home() {
             {projects.map((num) => (
               <div key={num} className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group bg-slate-200 dark:bg-slate-800 border border-slate-100 dark:border-slate-800">
                 <Image src={`/projektek/LegutobbiProjektek${num}.webp`} alt={`Referencia munka ${num}`} fill className="object-cover transition-transform duration-700 group-hover:scale-110" draggable="false" />
-                {/* Márkakék/Cián overlay hoverre */}
                 <div className="absolute inset-0 bg-[#0001f9]/10 dark:bg-[#00ffff]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
@@ -136,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TÉRKÉP */}
+      {/* TÉRKÉP SZEKCIÓ */}
       <section className="w-full h-[450px] overflow-hidden">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.3417182387116!2d19.03750551323127!3d47.561139371065536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d97597c972f9%3A0x26f72e1a36a085dc!2sBudapest%2C%20Csik%C3%B3s%20u.%2013%2C%201033!5e0!3m2!1shu!2shu!4v1766756980136!5m2!1shu!2shu" 
