@@ -18,9 +18,18 @@ export default function ScrollingCompaniesSection({
         <h2 className="text-center text-xs font-bold uppercase tracking-[0.24em] text-[#0001f9] sm:text-sm sm:tracking-[0.3em]">
           {title}
         </h2>
-        <ul className="sr-only">
+        <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center sm:mt-5 sm:gap-x-5">
           {companies.map((company) => (
-            <li key={company.name}>{company.name}</li>
+            <li key={company.name}>
+              <a
+                href={company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-6 items-center text-sm font-bold text-slate-600 transition-colors duration-200 hover:text-[#0001f9] focus-visible:text-[#0001f9]"
+              >
+                {company.name}
+              </a>
+            </li>
           ))}
         </ul>
       </div>
@@ -35,15 +44,12 @@ export default function ScrollingCompaniesSection({
           transition={{ duration: animationDuration, repeat: Infinity, ease: "linear" }}
         >
           {[...companies, ...companies].map((company, index) => (
-            <a
+            <span
               key={`${company.name}-${index}`}
-              href={company.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="select-none text-xl font-black uppercase tracking-tighter text-slate-300 no-underline transition-all duration-300 hover:text-[#0001f9] sm:text-2xl md:text-4xl"
+              className="select-none text-xl font-black uppercase tracking-tighter text-slate-500 no-underline sm:text-2xl md:text-4xl"
             >
               {company.name}
-            </a>
+            </span>
           ))}
         </motion.div>
       </div>
