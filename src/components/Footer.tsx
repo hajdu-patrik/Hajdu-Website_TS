@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, MapPin, Users, Code2, Github, Linkedin, Mail } from "lucide-react";
+import { MapPin, Users, Code2, Mail, Github, Linkedin, Facebook } from "lucide-react";
 
 export default function Footer() {
   const facebookPage = "https://www.facebook.com/p/Hajdú-Közmű-Kft-100063708745631";
@@ -10,32 +10,31 @@ export default function Footer() {
   const linkedinUrl = "https://www.linkedin.com/in/hajdu-patrik/";
 
   return (
-    <footer className="bg-white dark:bg-[#020617] border-t border-slate-200 dark:border-slate-800 pt-16 pb-8 transition-colors duration-500" aria-labelledby="footer-heading">
+    <footer className="bg-white border-t border-slate-200 pt-12 pb-8 transition-colors duration-500 sm:pt-16" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Lábléc és Kapcsolati adatok</h2>
       
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-4 sm:px-6 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-12">
+
         {/* 1. OSZLOP: CÉGINFÓ & KAPCSOLAT GOMBOK */}
-        <div className="space-y-6">
-          <h3 className="text-2xl font-black uppercase tracking-tighter text-[#0606ff] dark:text-[#00ffff]">
+        <div className="mx-auto w-full max-w-sm space-y-6 text-center md:text-left">
+          <h3 className="text-2xl font-black uppercase tracking-tighter text-[#0606ff]">
             Hajdú Közmű Kft.
           </h3>
-          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             Megbízható közműépítési megoldások több mint két évtizede. Ivóvíz, csatorna és mélyépítés mesterfokon.
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center gap-3 md:justify-start">
             {/* Facebook Gomb */}
             <a href={facebookPage}
                target="_blank"
                rel="noopener noreferrer" 
-               className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-[#0606ff] dark:text-[#00ffff] hover:scale-110 transition-all shadow-sm"
+              className="social-icon-button"
                aria-label="Kövessen minket Facebookon">
               <Facebook size={20} />
             </a>
             {/* Email Gomb */}
             <a href={emailAddress}
-               target="_blank" 
-               className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-[#0606ff] dark:text-[#00ffff] hover:scale-110 transition-all shadow-sm"
+              className="social-icon-button"
                aria-label="Írjon nekünk e-mailt">
               <Mail size={20} />
             </a>
@@ -43,87 +42,91 @@ export default function Footer() {
         </div>
 
         {/* 2. OSZLOP: TELEPHELY */}
-        <div className="space-y-6">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
-            <MapPin size={14} className="text-[#0606ff] dark:text-[#00ffff]" /> Telephelyünk
+        <div className="mx-auto w-full max-w-sm space-y-6 text-center md:text-left lg:pl-8">
+          <h4 className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 md:justify-start">
+            <MapPin size={14} className="text-[#0606ff]" /> Telephelyünk
           </h4>
-          <address className="not-italic text-sm font-bold text-slate-800 dark:text-slate-200">
+          <address className="not-italic text-sm font-bold text-slate-800">
             1033 Budapest, <br /> Csikós u. 13-15.
           </address>
-          <div className="space-y-2 text-xs text-slate-500 dark:text-slate-400">
-            <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1">
-              <span>H - Cs:</span> <span className="text-slate-900 dark:text-slate-100">07:00 - 16:00</span>
+          <div className="mx-auto w-full max-w-[18rem] space-y-2 text-xs text-slate-500 md:mx-0">
+            <div className="flex justify-between border-b border-slate-100 pb-1">
+              <span>H - Cs:</span> <span className="text-slate-900">07:00 - 16:00</span>
             </div>
-            <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1">
-              <span>Péntek:</span> <span className="text-slate-900 dark:text-slate-100">07:00 - 15:00</span>
+            <div className="flex justify-between border-b border-slate-100 pb-1">
+              <span>Péntek:</span> <span className="text-slate-900">07:00 - 15:00</span>
             </div>
             <div className="flex justify-between">
-              <span>Szo - V:</span> <span className="font-bold text-[#0606ff] dark:text-[#00ffff]">Zárva</span>
+              <span>Szo - V:</span> <span className="font-bold text-[#0606ff]">Zárva</span>
             </div>
           </div>
         </div>
 
         {/* 3. OSZLOP: ÜGYVEZETŐK */}
-        <div className="space-y-6">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
-            <Users size={14} className="text-[#0606ff] dark:text-[#00ffff]" /> Ügyvezetés
+        <div className="mx-auto w-full max-w-sm space-y-6 text-center md:text-left lg:pl-12">
+          <h4 className="flex items-center justify-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 md:justify-start">
+            <Users size={14} className="text-[#0606ff]" /> Ügyvezetés
           </h4>
-          <div className="space-y-4">
-            <div className="border-l-2 border-[#0606ff] dark:border-[#00ffff] pl-4">
-              <p className="text-sm font-black text-slate-900 dark:text-white">Hajdú Zsolt</p>
-              <a href="mailto:hajdu.zsolt@hajdu.hu" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.zsolt@hajdu.hu</a>
-              <a href="tel:+36209294317" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 4317</a>
+          <div className="mx-auto max-w-[18rem] space-y-4 text-left md:mx-0">
+            <div className="border-l-2 border-[#0606ff] pl-4">
+              <p className="text-sm font-black text-slate-900">Hajdú Zsolt</p>
+              <a href="mailto:hajdu.zsolt@hajdu.hu" className="block text-xs text-slate-500 transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">hajdu.zsolt@hajdu.hu</a>
+              <a href="tel:+36209294317" className="block text-xs text-slate-500 transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">+36 20 929 4317</a>
             </div>
-            <div className="border-l-2 border-slate-300 dark:border-slate-700 pl-4">
-              <p className="text-sm font-black text-slate-900 dark:text-white">Hajdú Tamás</p>
-              <a href="mailto:hajdu.tamas@hajdu.hu" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">hajdu.tamas@hajdu.hu</a>
-              <a href="tel:+36209293964" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-[#0606ff] dark:hover:text-[#00ffff] block transition-colors">+36 20 929 3964</a>
+            <div className="border-l-2 border-slate-300 pl-4">
+              <p className="text-sm font-black text-slate-900">Hajdú Tamás</p>
+              <a href="mailto:hajdu.tamas@hajdu.hu" className="block text-xs text-slate-500 transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">hajdu.tamas@hajdu.hu</a>
+              <a href="tel:+36209293964" className="block text-xs text-slate-500 transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">+36 20 929 3964</a>
             </div>
           </div>
         </div>
 
         {/* 4. OSZLOP: OLDALKÉSZÍTŐ */}
-        <div className="space-y-6">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
-            <Code2 size={14} className="text-[#0606ff] dark:text-[#00ffff]" /> Oldalkészítő
+        <div className="mx-auto w-full max-w-sm space-y-6 text-center md:text-left">
+          <h4 className="flex items-center justify-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 md:justify-start">
+            <Code2 size={14} className="text-[#0606ff]" /> Oldalkészítő
           </h4>
-          <div className="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-inner">
-            <p className="text-sm font-black text-slate-900 dark:text-white mb-4">Hajdú Patrik</p>
-            
+          <div>
             <div className="flex flex-col gap-3">
-              <a 
-                href={githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-tighter bg-slate-900 dark:bg-[#00ffff] text-white dark:text-slate-950 px-4 py-2.5 rounded-xl hover:scale-105 transition-all shadow-md group"
-              >
-                <Github size={16} className="group-hover:rotate-12 transition-transform" />
-                GitHub profil
-              </a>
+            <a 
+              href={githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Hajdú Patrik GitHub profilja"
+              className="group profile-link-button profile-link-button-primary"
+            >
+              <Github size={16} className="group-hover:rotate-12 transition-transform" />
+              GitHub profil
+            </a>
 
-              <a 
-                href={linkedinUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-tighter bg-[#0606ff] dark:bg-slate-800 text-white dark:text-[#00ffff] px-4 py-2.5 rounded-xl border border-[#0606ff] dark:border-slate-700 hover:scale-105 transition-all shadow-md group"
-              >
-                <Linkedin size={16} className="group-hover:-rotate-12 transition-transform" />
-                LinkedIn profil
-              </a>
+            <a 
+              href={linkedinUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Hajdú Patrik LinkedIn profilja"
+              className="group profile-link-button profile-link-button-brand"
+            >
+              <Linkedin size={16} className="group-hover:-rotate-12 transition-transform" />
+              LinkedIn profil
+            </a>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-        <p>© {new Date().getFullYear()} Hajdú Közmű Kft.</p>
-        <div className="flex gap-6">
-          <Link href="/" className="hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">Főoldal</Link>
-          <Link href="/rolunk" className="hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">Rólunk</Link>
-          <Link href="/termekek" className="hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">Termékek</Link>
-          <Link href="/palyazatok" className="hover:text-[#0606ff] dark:hover:text-[#00ffff] transition-colors">Pályázatok</Link>
-        </div>
+      <div className="max-w-7xl mx-auto mt-14 flex flex-col items-center justify-between gap-5 border-t border-slate-100 px-4 pt-8 text-xs font-bold uppercase tracking-[0.14em] text-slate-400 sm:px-6 md:mt-16 md:flex-row md:gap-4">
+        <p>&copy; {new Date().getFullYear()} Hajdú Közmű Kft.</p>
+        <nav aria-label="Lábléc navigáció">
+          <ul className="list-none flex flex-wrap justify-center gap-x-5 gap-y-2 sm:gap-x-6">
+            <li><Link href="/" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">Főoldal</Link></li>
+            <li><Link href="/rolunk" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">Rólunk</Link></li>
+            <li><Link href="/termekek" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">Termékek</Link></li>
+            <li><Link href="/palyazatok" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">Pályázatok</Link></li>
+            <li><Link href="/gyakori-kerdesek" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">GYIK</Link></li>
+            <li><Link href="/kapcsolat" className="transition-colors duration-200 hover:text-[#0606ff] focus-visible:text-[#0606ff]">Kapcsolat</Link></li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

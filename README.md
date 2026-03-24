@@ -23,7 +23,7 @@ The project was engineered to bridge the gap between heavy industrial expertise 
 
 ## ✨ Key Engineering Features
 
-* **Semantic Theme Architecture:** Implemented a robust Dark/Light mode toggle using CSS variables and `next-themes`. The Light mode was specifically tuned with "soft-contrast" palettes (`bg-slate-50`) to reduce eye strain while maintaining brand integrity.
+* **Semantic Color Architecture:** Implemented a light-only visual system using CSS variables and tuned "soft-contrast" palettes (`bg-slate-50`) to reduce eye strain while maintaining brand integrity.
 * **High-Fidelity Animations:** Integrated `framer-motion` for hardware-accelerated transitions. Features include an "Infinite Loop" partner slider and staggered entrance animations for section headers.
 * **Performance-First Assets:** Utilized Next.js `next/image` for automatic WebP conversion and lazy-loading, significantly improving Largest Contentful Paint (LCP) scores.
 * **Responsive Fluid Layouts:** Engineered a grid-based system that adapts from mobile-first views to wide-screen desktop monitors using Tailwind CSS v4's modern utility engine.
