@@ -5,7 +5,7 @@ All Rights Reserved
 
 ## 1. Project Status
 
-This is a proprietary, closed-source project. The software and all related source code were developed as **commissioned work** for a Hajdu Közmü Kft. client.
+This is a proprietary, closed-source project. The software and all related source code were developed as **commissioned work** for a Hajdú Közmü Kft. client.
 
 All intellectual property rights, copyrights, and other rights related to this project are owned by the client.
 
