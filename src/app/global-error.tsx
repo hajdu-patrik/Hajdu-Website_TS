@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { AlertTriangle, Home, RefreshCw } from "lucide-react";
+import { RefreshCw } from "lucide-react";
+import { AlertTriangle, Home } from "@/components/icons/BrandIcons";
 import ErrorPageCard from "@/components/errors/ErrorPageCard";
 
 type GlobalErrorProps = Readonly<{

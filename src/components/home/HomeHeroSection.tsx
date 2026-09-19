@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle, CircleQuestionMark } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { CheckCircle, CircleQuestionMark } from "@/components/icons/BrandIcons";
 
 type HomeHeroSectionProps = Readonly<{
   advantages: readonly string[];

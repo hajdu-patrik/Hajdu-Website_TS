@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Users, Code2, Mail, Github, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Users, Mail } from "lucide-react";
+import { Github, Linkedin, Facebook, Code2 } from "@/components/icons/BrandIcons";
 
 export default function Footer() {
   const facebookPage = "https://www.facebook.com/p/Hajdú-Közmű-Kft-100063708745631";

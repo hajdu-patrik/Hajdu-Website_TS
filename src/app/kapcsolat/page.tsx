@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import {
-  Clock3,
-  Mail,
-  MapPin,
-  Phone,
-  SquareArrowOutUpRight,
-} from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock3, SquareArrowOutUpRight } from "@/components/icons/BrandIcons";
 import JsonLdScript from "@/components/seo/JsonLdScript";
 import { createBreadcrumbJsonLd, createPageMetadata, siteUrl } from "@/lib/seo";
 

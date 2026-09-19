@@ -6,20 +6,18 @@ import {
   Factory,
   Flame,
   Gauge,
-  House,
   Mountain,
   Plane,
-  PlugZap,
   Route,
   Shield,
   ShieldCheck,
   TowerControl,
   Warehouse,
-  Waves,
   Workflow,
   Wrench,
   type LucideIcon,
 } from "lucide-react";
+import { House, PlugZap, Waves } from "@/components/icons/BrandIcons";
 import Image from "next/image";
 import JsonLdScript from "@/components/seo/JsonLdScript";
 import { createBreadcrumbJsonLd, createPageMetadata, siteUrl } from "@/lib/seo";

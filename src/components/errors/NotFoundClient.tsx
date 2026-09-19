@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { AlertCircle, ArrowLeft, UsersRound } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { AlertCircle, UsersRound } from "@/components/icons/BrandIcons";
 import ErrorPageCard from "@/components/errors/ErrorPageCard";
 
 export default function NotFoundClient() {
