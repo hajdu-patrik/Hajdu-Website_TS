@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { MapPin, Users, Mail } from "lucide-react";
 import { Github, Linkedin, Facebook, Code2 } from "@/components/icons/BrandIcons";
+import { Button } from "@/components/ui/Button";
 
 export default function Footer() {
   const facebookPage = "https://www.facebook.com/p/Hajdú-Közmű-Kft-100063708745631";
@@ -26,19 +27,19 @@ export default function Footer() {
           </p>
           <div className="flex justify-center gap-3 md:justify-start">
             {/* Facebook Gomb */}
-            <a href={facebookPage}
-               target="_blank"
-               rel="noopener noreferrer" 
-              className="social-icon-button"
-               aria-label="Kövessen minket Facebookon">
+            <Button
+              variant="social"
+              href={facebookPage}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Kövessen minket Facebookon"
+            >
               <Facebook size={20} />
-            </a>
+            </Button>
             {/* Email Gomb */}
-            <a href={emailAddress}
-              className="social-icon-button"
-               aria-label="Írjon nekünk e-mailt">
+            <Button variant="social" href={emailAddress} aria-label="Írjon nekünk e-mailt">
               <Mail size={20} />
-            </a>
+            </Button>
           </div>
         </div>
 
@@ -89,27 +90,29 @@ export default function Footer() {
           </h4>
           <div>
             <div className="flex flex-col gap-3">
-            <a 
-              href={githubUrl} 
-              target="_blank" 
+            <Button
+              variant="profilePrimary"
+              href={githubUrl}
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Hajdú Patrik GitHub profilja"
-              className="group profile-link-button profile-link-button-primary"
+              className="group"
             >
               <Github size={16} className="group-hover:rotate-12 transition-transform" />
               GitHub profil
-            </a>
+            </Button>
 
-            <a 
-              href={linkedinUrl} 
-              target="_blank" 
+            <Button
+              variant="profileBrand"
+              href={linkedinUrl}
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Hajdú Patrik LinkedIn profilja"
-              className="group profile-link-button profile-link-button-brand"
+              className="group"
             >
               <Linkedin size={16} className="group-hover:-rotate-12 transition-transform" />
               LinkedIn profil
-            </a>
+            </Button>
             </div>
           </div>
         </div>

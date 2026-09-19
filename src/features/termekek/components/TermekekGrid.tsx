@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 
 type Product = {
   id: string;
@@ -85,13 +86,14 @@ export default function TermekekGrid({ products }: TermekekGridProps) {
               </ul>
 
               <div className="mt-auto">
-                <a
+                <Button
+                  variant="wide"
                   href={`mailto:hajdu.zsolt@hajdu.hu?subject=${encodeURIComponent(product.emailSubject)}`}
                   aria-label={`${product.title} ajánlatkérés e-mailben`}
-                  className="btn-primary-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2"
+                  className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2"
                 >
                   Ajánlatot kérek
-                </a>
+                </Button>
               </div>
             </div>
           </section>

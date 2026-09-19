@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CheckCircle, CircleQuestionMark } from "@/components/icons/BrandIcons";
+import { Button } from "@/components/ui/Button";
 
 type HomeHeroSectionProps = Readonly<{
   advantages: readonly string[];
@@ -64,20 +64,14 @@ export default function HomeHeroSection({ advantages }: HomeHeroSectionProps) {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <Link
-              href="/termekek"
-              className="btn-primary w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em]"
-            >
+            <Button variant="primary" href="/termekek" className="w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em]">
               Fagymentes kerti csap
               <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="/gyakori-kerdesek"
-              className="btn-secondary w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em]"
-            >
+            </Button>
+            <Button variant="secondary" href="/gyakori-kerdesek" className="w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em]">
               GYIK
               <CircleQuestionMark size={18} />
-            </Link>
+            </Button>
           </div>
         </div>
 

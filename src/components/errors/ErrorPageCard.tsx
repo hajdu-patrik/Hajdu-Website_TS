@@ -1,9 +1,9 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { uiMotion } from "@/lib/motion";
+import { Button } from "@/components/ui/Button";
 
 type ErrorAction = Readonly<{
   label: string;
@@ -33,8 +33,6 @@ function ActionButton({ action, variant }: ActionButtonProps) {
   const baseClassName =
     "w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2";
 
-  const variantClassName = variant === "primary" ? "btn-primary" : "btn-secondary";
-
   const content = (
     <>
       {action.icon}
@@ -44,16 +42,16 @@ function ActionButton({ action, variant }: ActionButtonProps) {
 
   if (action.href) {
     return (
-      <Link href={action.href} className={`${baseClassName} ${variantClassName}`}>
+      <Button variant={variant} href={action.href} className={baseClassName}>
         {content}
-      </Link>
+      </Button>
     );
   }
 
   return (
-    <button type="button" onClick={action.onClick} className={`${baseClassName} ${variantClassName}`}>
+    <Button variant={variant} onClick={action.onClick} className={baseClassName}>
       {content}
-    </button>
+    </Button>
   );
 }
 

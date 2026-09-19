@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Clock3, SquareArrowOutUpRight } from "@/components/icons/BrandIcons";
 import JsonLdScript from "@/components/seo/JsonLdScript";
+import { Button } from "@/components/ui/Button";
 import { createBreadcrumbJsonLd, createPageMetadata, siteUrl } from "@/lib/seo";
 
 const mapEmbedUrl = "https://www.google.com/maps?q=1033+Budapest,+Csik%C3%B3s+u.+13-15&output=embed";
@@ -155,15 +156,16 @@ export default function KapcsolatPage() {
 
               <div className="relative z-10 mb-4 flex flex-wrap items-center justify-between gap-3 sm:mb-5">
                 <h2 className="text-xl font-black uppercase tracking-tight text-slate-900 sm:text-2xl">Térkép és útvonal</h2>
-                <a
+                <Button
+                  variant="primary"
                   href={mapExternalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary rounded-full px-4 py-2.5"
+                  className="rounded-full px-4 py-2.5"
                 >
                   Megnyitás térképen
                   <SquareArrowOutUpRight size={13} />
-                </a>
+                </Button>
               </div>
 
               <div className="relative z-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">

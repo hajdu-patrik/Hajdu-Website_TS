@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 export default function HomeContactSection() {
   return (
@@ -23,19 +23,13 @@ export default function HomeContactSection() {
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="tel:+36209294317"
-                className="btn-primary"
-              >
+              <Button variant="primary" href="tel:+36209294317">
                 <Phone size={16} /> Hívjon most
-              </a>
-              <Link
-                href="/kapcsolat"
-                className="btn-secondary"
-              >
+              </Button>
+              <Button variant="secondary" href="/kapcsolat">
                 Teljes elérhetőségek
                 <ArrowRight size={16} />
-              </Link>
+              </Button>
             </div>
           </div>
 
