@@ -1,14 +1,14 @@
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-flat&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-flat&logo=next.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-flat&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-flat&logo=framer&logoColor=white)
-![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-flat&logo=vercel&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-flat)
-![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-flat)
-
 # Custom Website for Hajdú Közmű Kft.
 
-This repository contains the source code for the official corporate platform of **Hajdú Közmű Kft.**, a leading firm specializing in utility construction and water management infrastructure. 
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=flat)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=flat)
+
+This repository contains the source code for the official corporate platform of **Hajdú Közmű Kft.**, a leading firm specializing in utility construction and water management infrastructure.
 
 The project was engineered to bridge the gap between heavy industrial expertise and modern digital aesthetics, ensuring a high-performance, accessible, and visually striking user experience.
 
@@ -32,7 +32,6 @@ The project was engineered to bridge the gap between heavy industrial expertise 
 ---
 
 ## 🛠️ Technology Stack
-
 
 * **Framework:** [Next.js 15+](https://nextjs.org/) (App Router Architecture)
 * **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed for enterprise-grade reliability)
@@ -61,3 +60,11 @@ Any push to the `main` branch automatically triggers a new build and deployment.
 | Environment | Status |
 | :--- | :--- |
 | **Production** | [![Vercel App](https://img.shields.io/badge/Visit-Live_App-success?style=for-the-badge&logo=vercel)](https://hajdu.hu) |
+
+---
+
+## 📄 License
+
+Copyright (c) Hajdú Patrik Zsolt. All rights reserved.
+
+Proprietary, commissioned work published for demonstration and portfolio purposes only. No rights to use, copy, modify or distribute it are granted. See [LICENSE.md](LICENSE.md) for the full terms.
