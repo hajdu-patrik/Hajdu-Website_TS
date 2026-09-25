@@ -24,16 +24,16 @@ The project was engineered to bridge the gap between heavy industrial expertise 
 ## ✨ Key Engineering Features
 
 * **Semantic Color Architecture:** Implemented a light-only visual system using CSS variables and tuned "soft-contrast" palettes (`bg-slate-50`) to reduce eye strain while maintaining brand integrity.
-* **High-Fidelity Animations:** Integrated `framer-motion` for hardware-accelerated transitions. Features include an "Infinite Loop" partner slider and staggered entrance animations for section headers.
-* **Performance-First Assets:** Utilized Next.js `next/image` for automatic WebP conversion and lazy-loading, significantly improving Largest Contentful Paint (LCP) scores.
+* **High-Fidelity Animations:** Integrated `framer-motion` for hardware-accelerated transitions. Features include an "Infinite Loop" partner slider and animated enter/exit transitions (`AnimatePresence`) for the mobile menu and the scroll-to-top button.
+* **Performance-First Assets:** Utilized Next.js `next/image` for automatic AVIF/WebP conversion and lazy-loading, significantly improving Largest Contentful Paint (LCP) scores.
 * **Responsive Fluid Layouts:** Engineered a grid-based system that adapts from mobile-first views to wide-screen desktop monitors using Tailwind CSS v4's modern utility engine.
-* **Accessible Navigation:** Custom hook-based scroll logic to handle internal anchor links (`#contact`) across multiple pages, ensuring consistent UX regardless of the entry point.
+* **Accessible Navigation:** Hash-aware scroll logic smoothly scrolls to in-page anchors (e.g. `/#referenciak`) on load and on hash changes, ensuring consistent UX regardless of the entry point, and a skip link (`#main-content`) lets keyboard users bypass the navigation.
 
 ---
 
 ## 🛠️ Technology Stack
 
-* **Framework:** [Next.js 15+](https://nextjs.org/) (App Router Architecture)
+* **Framework:** [Next.js 16](https://nextjs.org/) (App Router Architecture)
 * **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed for enterprise-grade reliability)
 * **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (Atomic CSS approach)
 * **Motion Engine:** [Framer Motion](https://www.framer.com/motion/)
