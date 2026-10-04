@@ -43,7 +43,7 @@ export default function HomeContactSection() {
                 <Phone size={18} />
               </span>
               <span>
-                <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Telefon</span>
+                <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telefon</span>
                 <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">+36 20 929 4317</span>
               </span>
             </a>
@@ -56,7 +56,7 @@ export default function HomeContactSection() {
                 <Mail size={18} />
               </span>
               <span>
-                <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-400">E-mail</span>
+                <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">E-mail</span>
                 <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">hajdu@hajdu.hu</span>
               </span>
             </a>
@@ -67,7 +67,7 @@ export default function HomeContactSection() {
                   <MapPin size={18} />
                 </span>
                 <div>
-                  <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">Telephelyünk</span>
+                  <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">Telephelyünk</span>
                   <p className="mt-1 break-words text-sm font-bold text-slate-800">1033 Budapest, Csikós u. 13-15.</p>
                 </div>
               </div>

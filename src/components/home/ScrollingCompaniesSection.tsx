@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { CompanyLink } from "@/components/home/home.types";
 
 type ScrollingCompaniesSectionProps = Readonly<{
@@ -12,6 +12,8 @@ export default function ScrollingCompaniesSection({
   companies,
   animationDuration,
 }: ScrollingCompaniesSectionProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section className="overflow-hidden border-y border-slate-200 bg-white py-16 transition-colors duration-500 sm:py-24">
       <div className="mx-auto mb-8 max-w-7xl px-4 sm:mb-10 sm:px-6">
@@ -40,8 +42,12 @@ export default function ScrollingCompaniesSection({
 
         <motion.div
           className="flex w-max items-center gap-8 whitespace-nowrap py-4 sm:gap-12 md:gap-24"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: animationDuration, repeat: Infinity, ease: "linear" }}
+          animate={prefersReducedMotion ? { x: "0%" } : { x: ["0%", "-50%"] }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : { duration: animationDuration, repeat: Infinity, ease: "linear" }
+          }
         >
           {[...companies, ...companies].map((company, index) => (
             <span

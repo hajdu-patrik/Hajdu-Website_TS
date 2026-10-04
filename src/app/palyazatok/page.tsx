@@ -92,7 +92,7 @@ export default function PalyazatokPage() {
                   </p>
                 </div>
                 <div className="shrink-0 space-y-1 md:text-right">
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
                     Kedvezményezett
                   </span>
                   <p className="text-xl font-black text-slate-700">Hajdú Közmű Kft.</p>

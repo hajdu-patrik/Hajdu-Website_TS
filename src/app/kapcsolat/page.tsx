@@ -105,7 +105,7 @@ export default function KapcsolatPage() {
                       <Mail size={18} />
                     </span>
                     <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-400">E-mail</span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">E-mail</span>
                       <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">hajdu@hajdu.hu</span>
                     </span>
                   </a>
@@ -118,7 +118,7 @@ export default function KapcsolatPage() {
                       <Phone size={18} />
                     </span>
                     <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Telefon</span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telefon</span>
                       <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">+36 20 929 4317</span>
                     </span>
                   </a>
@@ -128,7 +128,7 @@ export default function KapcsolatPage() {
                       <MapPin size={18} />
                     </span>
                     <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Telephely</span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telephely</span>
                       <span className="mt-1 block break-words text-sm font-bold text-slate-800">1033 Budapest, Csikós u. 13-15.</span>
                     </span>
                   </div>
