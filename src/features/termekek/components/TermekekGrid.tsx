@@ -42,7 +42,7 @@ export default function TermekekGrid({ products }: TermekekGridProps) {
             onFocus={() => setActiveProductId(product.id)}
             onBlur={() => setActiveProductId(defaultProductId)}
             className={`group product-card ${
-              isActive ? "border-[#0001f9] shadow-2xl" : "border-slate-200"
+              isActive ? "border-brand shadow-2xl" : "border-slate-200"
             }`}
           >
             <div className="relative mb-6 h-80 shrink-0 overflow-hidden rounded-[1.6rem] bg-slate-100 sm:mb-8 sm:h-[26rem] sm:rounded-[2rem] lg:h-[30rem]">
@@ -57,7 +57,7 @@ export default function TermekekGrid({ products }: TermekekGridProps) {
             </div>
 
             <div className="flex flex-grow flex-col px-4 pb-4 sm:px-6 sm:pb-6">
-              <p className="text-center text-[11px] font-bold uppercase tracking-[0.24em] text-[#0001f9] sm:text-xs sm:tracking-[0.3em]">
+              <p className="text-center text-xs font-bold uppercase tracking-[0.24em] text-brand sm:text-xs sm:tracking-[0.3em]">
                 {product.kicker}
               </p>
               <h2
@@ -90,7 +90,7 @@ export default function TermekekGrid({ products }: TermekekGridProps) {
                   variant="wide"
                   href={`mailto:hajdu.zsolt@hajdu.hu?subject=${encodeURIComponent(product.emailSubject)}`}
                   aria-label={`${product.title} ajánlatkérés e-mailben`}
-                  className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2"
+                  className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
                 >
                   Ajánlatot kérek
                 </Button>

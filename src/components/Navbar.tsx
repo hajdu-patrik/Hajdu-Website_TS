@@ -100,10 +100,10 @@ export default function Navbar() {
                   href={item.href} 
                   onClick={(e) => handleNavClick(e, item.href)}
                   aria-current={isActivePath(item.href) ? "page" : undefined}
-                  className={`font-bold uppercase text-[11px] tracking-[0.16em] transition-colors duration-200 focus-visible:text-[#0001f9] xl:text-xs xl:tracking-[0.2em] ${
+                  className={`font-bold uppercase text-xs tracking-[0.12em] transition-colors duration-200 focus-visible:text-brand xl:tracking-[0.2em] ${
                     isActivePath(item.href)
-                      ? "text-[#0001f9]"
-                      : "text-slate-600 hover:text-[#0001f9]"
+                      ? "text-brand"
+                      : "text-slate-600 hover:text-brand"
                   }`}
                 >
                   {item.name}
@@ -146,7 +146,7 @@ export default function Navbar() {
                       href={item.href} 
                       onClick={(e) => handleNavClick(e, item.href)}
                       aria-current={isActivePath(item.href) ? "page" : undefined}
-                      className="text-2xl font-black uppercase tracking-tight text-slate-900 transition-colors duration-200 hover:text-[#0001f9] focus-visible:text-[#0001f9] sm:text-3xl"
+                      className="text-2xl font-black uppercase tracking-tight text-slate-900 transition-colors duration-200 hover:text-brand focus-visible:text-brand sm:text-3xl"
                     >
                       {item.name}
                     </Link>

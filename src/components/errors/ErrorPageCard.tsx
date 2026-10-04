@@ -31,7 +31,7 @@ type ActionButtonProps = Readonly<{
 
 function ActionButton({ action, variant }: ActionButtonProps) {
   const baseClassName =
-    "w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2";
+    "w-full gap-3 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.2em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2";
 
   const content = (
     <>
@@ -102,16 +102,16 @@ export default function ErrorPageCard({
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.15, duration: 0.35 }}
-          className="relative mx-auto mb-7 inline-flex rounded-[1.3rem] border border-slate-200/90 bg-white p-4 shadow-xl shadow-[#0001f9]/10 sm:mb-8 sm:rounded-[1.5rem] sm:p-5"
+          className="relative mx-auto mb-7 inline-flex rounded-[1.3rem] border border-slate-200/90 bg-white p-4 shadow-xl shadow-brand/10 sm:mb-8 sm:rounded-[1.5rem] sm:p-5"
         >
-          <div className="text-[#0001f9]">{visual}</div>
+          <div className="text-brand">{visual}</div>
         </motion.div>
 
         {label ? (
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">{label}</p>
         ) : null}
 
-        <p className="mb-2 bg-gradient-to-r from-[#0001f9] to-cyan-500 bg-clip-text text-5xl font-black leading-none tracking-tight text-transparent sm:text-6xl md:text-8xl">
+        <p className="mb-2 text-5xl font-black leading-none tracking-tight text-brand sm:text-6xl md:text-8xl">
           {code}
         </p>
         <h1 id="error-page-title" className="mb-4 text-xl font-bold text-slate-900 sm:text-2xl md:text-4xl">
@@ -130,7 +130,7 @@ export default function ErrorPageCard({
                 initial={{ y: 12, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -12, opacity: 0 }}
-                className="block text-4xl font-black text-[#0001f9] sm:text-5xl"
+                className="block text-4xl font-black text-brand sm:text-5xl"
                 aria-live="polite"
               >
                 {countdown}

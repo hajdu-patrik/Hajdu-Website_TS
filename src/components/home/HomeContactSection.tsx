@@ -12,7 +12,7 @@ export default function HomeContactSection() {
           {/* BALOLDAL: TEXT + CTA */}
           <div className="space-y-6 lg:col-span-2 xl:col-span-2">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#0001f9]">Gyors elérhetőség</span>
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand">Gyors elérhetőség</span>
               <h2 id="contact-cta-title" className="mt-2 text-3xl font-black leading-tight text-slate-900 sm:text-4xl md:text-5xl">
                 Írjon vagy hívjon minket – szívesen segítünk!
               </h2>
@@ -39,12 +39,12 @@ export default function HomeContactSection() {
               href="tel:+36209294317"
               className="group info-item-link"
             >
-              <span className="rounded-xl bg-[#0001f9]/10 p-2 text-[#0001f9]">
+              <span className="rounded-xl bg-brand/10 p-2 text-brand">
                 <Phone size={18} />
               </span>
               <span>
                 <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telefon</span>
-                <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">+36 20 929 4317</span>
+                <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-brand">+36 20 929 4317</span>
               </span>
             </a>
 
@@ -52,22 +52,22 @@ export default function HomeContactSection() {
               href="mailto:hajdu@hajdu.hu"
               className="group info-item-link"
             >
-              <span className="rounded-xl bg-[#0001f9]/10 p-2 text-[#0001f9]">
+              <span className="rounded-xl bg-brand/10 p-2 text-brand">
                 <Mail size={18} />
               </span>
               <span>
                 <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">E-mail</span>
-                <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">hajdu@hajdu.hu</span>
+                <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-brand">hajdu@hajdu.hu</span>
               </span>
             </a>
 
             <article className="info-item-static">
               <div className="flex items-start gap-3">
-                <span className="rounded-lg bg-[#0001f9]/10 p-2 text-[#0001f9]">
+                <span className="rounded-lg bg-brand/10 p-2 text-brand">
                   <MapPin size={18} />
                 </span>
                 <div>
-                  <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">Telephelyünk</span>
+                  <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telephelyünk</span>
                   <p className="mt-1 break-words text-sm font-bold text-slate-800">1033 Budapest, Csikós u. 13-15.</p>
                 </div>
               </div>

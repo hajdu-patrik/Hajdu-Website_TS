@@ -101,12 +101,12 @@ export default function KapcsolatPage() {
                     href="mailto:hajdu@hajdu.hu"
                     className="group info-item-link"
                   >
-                    <span className="rounded-xl bg-[#0001f9]/10 p-2 text-[#0001f9]">
+                    <span className="rounded-xl bg-brand/10 p-2 text-brand">
                       <Mail size={18} />
                     </span>
                     <span>
                       <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">E-mail</span>
-                      <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">hajdu@hajdu.hu</span>
+                      <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-brand">hajdu@hajdu.hu</span>
                     </span>
                   </a>
 
@@ -114,17 +114,17 @@ export default function KapcsolatPage() {
                     href="tel:+36209294317"
                     className="group info-item-link"
                   >
-                    <span className="rounded-xl bg-[#0001f9]/10 p-2 text-[#0001f9]">
+                    <span className="rounded-xl bg-brand/10 p-2 text-brand">
                       <Phone size={18} />
                     </span>
                     <span>
                       <span className="block text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Telefon</span>
-                      <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-[#0001f9]">+36 20 929 4317</span>
+                      <span className="mt-1 block text-sm font-bold text-slate-800 group-hover:text-brand">+36 20 929 4317</span>
                     </span>
                   </a>
 
                   <div className="info-item-static">
-                    <span className="rounded-xl bg-[#0001f9]/10 p-2 text-[#0001f9]">
+                    <span className="rounded-xl bg-brand/10 p-2 text-brand">
                       <MapPin size={18} />
                     </span>
                     <span>
@@ -136,7 +136,7 @@ export default function KapcsolatPage() {
 
                 <div className="mt-8 rounded-2xl border border-slate-200/90 bg-white/85 p-5 shadow-sm">
                   <h3 className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-slate-500">
-                    <Clock3 size={14} className="text-[#0001f9]" /> Nyitvatartás
+                    <Clock3 size={14} className="text-brand" /> Nyitvatartás
                   </h3>
                   <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
                     {officeHours.map((item) => (
@@ -190,13 +190,13 @@ export default function KapcsolatPage() {
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 {managers.map((manager, index) => (
-                  <article key={manager.email} className={`rounded-2xl border bg-white/85 p-5 shadow-sm ${index === 0 ? "border-[#0001f9]/30" : "border-slate-200/90"}`}>
+                  <article key={manager.email} className={`rounded-2xl border bg-white/85 p-5 shadow-sm ${index === 0 ? "border-brand/30" : "border-slate-200/90"}`}>
                     <p className="text-lg font-black text-slate-900">{manager.name}</p>
                     <div className="mt-4 space-y-2.5">
-                      <a href={manager.hrefEmail} className="block break-all text-sm font-bold text-slate-600 transition-colors duration-200 hover:text-[#0001f9] focus-visible:text-[#0001f9]">
+                      <a href={manager.hrefEmail} className="block break-all text-sm font-bold text-slate-600 transition-colors duration-200 hover:text-brand focus-visible:text-brand">
                         {manager.email}
                       </a>
-                      <a href={manager.hrefPhone} className="block break-all text-sm font-bold text-slate-600 transition-colors duration-200 hover:text-[#0001f9] focus-visible:text-[#0001f9]">
+                      <a href={manager.hrefPhone} className="block break-all text-sm font-bold text-slate-600 transition-colors duration-200 hover:text-brand focus-visible:text-brand">
                         {manager.phone}
                       </a>
                     </div>

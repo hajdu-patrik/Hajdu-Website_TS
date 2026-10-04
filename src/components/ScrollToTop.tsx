@@ -58,7 +58,7 @@ export default function ScrollToTop() {
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => globalThis.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-5 right-4 z-[100] rounded-2xl border border-[#0001f9]/30 bg-[#0001f9] p-3 text-white shadow-lg shadow-[#0001f9]/10 backdrop-blur-md transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0001f9] focus-visible:ring-offset-2 sm:bottom-8 sm:right-8 sm:p-4"
+          className="fixed bottom-5 right-4 z-[100] rounded-2xl border border-brand/30 bg-brand p-3 text-white shadow-lg shadow-brand/10 backdrop-blur-md transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:bottom-8 sm:right-8 sm:p-4"
           aria-label="Vissza az oldal tetejére"
         >
           <ChevronUp 

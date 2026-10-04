@@ -8,11 +8,11 @@ type HomeHeroSectionProps = Readonly<{
 
 const advantageAccentStyles = [
   {
-    bar: "from-[#0001f9]/80 via-cyan-300 to-[#0001f9]/80",
-    iconWrap: "border-[#0001f9]/20 bg-[#0001f9]/10",
-    iconColor: "text-[#0001f9]",
-    hoverBorder: "hover:border-[#0001f9]/40",
-    hoverText: "group-hover:text-[#0001f9]",
+    bar: "from-brand/80 via-cyan-300 to-brand/80",
+    iconWrap: "border-brand/20 bg-brand/10",
+    iconColor: "text-brand",
+    hoverBorder: "hover:border-brand/40",
+    hoverText: "group-hover:text-brand",
   },
   {
     bar: "from-cyan-500/80 via-sky-300 to-cyan-500/80",
@@ -55,12 +55,12 @@ export default function HomeHeroSection({ advantages }: HomeHeroSectionProps) {
           >
             Hajdú Közmű Kft.
           </h1>
-          <p className="mb-8 text-xs font-bold uppercase tracking-[0.16em] text-[#0001f9] sm:mb-10 sm:text-xl sm:tracking-[0.35em]">
+          <p className="mb-8 text-xs font-bold uppercase tracking-[0.16em] text-brand sm:mb-10 sm:text-xl sm:tracking-[0.35em]">
             Garantált elégedettség
           </p>
           <p className="mx-auto mb-12 max-w-3xl text-lg font-light leading-relaxed text-slate-600 sm:mb-16 sm:text-xl">
             <span className="block">Minden projektet a megérdemelt tisztelettel kezelünk.</span>
-            <span className="block font-semibold text-[#0001f9]">Közműépítés mesterfokon.</span>
+            <span className="block font-semibold text-brand">Közműépítés mesterfokon.</span>
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">

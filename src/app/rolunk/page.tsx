@@ -77,11 +77,11 @@ const remainingGalleryImages = galleryImages.slice(3);
 
 const activityAccentStyles = [
   {
-    bar: "from-[#0001f9]/80 via-cyan-300 to-[#0001f9]/80",
-    iconWrap: "border-[#0001f9]/20 bg-[#0001f9]/10",
-    iconColor: "text-[#0001f9]",
-    hoverBorder: "hover:border-[#0001f9]/40",
-    hoverText: "group-hover:text-[#0001f9]",
+    bar: "from-brand/80 via-cyan-300 to-brand/80",
+    iconWrap: "border-brand/20 bg-brand/10",
+    iconColor: "text-brand",
+    hoverBorder: "hover:border-brand/40",
+    hoverText: "group-hover:text-brand",
   },
   {
     bar: "from-cyan-500/80 via-sky-300 to-cyan-500/80",

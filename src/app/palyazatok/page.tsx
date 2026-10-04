@@ -75,7 +75,7 @@ export default function PalyazatokPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 to-transparent" />
               <div className="absolute bottom-8 left-8">
-                <span className="rounded-full bg-[#0001f9] px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
+                <span className="rounded-full bg-brand px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
                   Sikeres projekt
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function PalyazatokPage() {
             <div className="space-y-8 p-5 sm:space-y-10 sm:p-8 md:p-12">
               <div className="flex flex-col items-start justify-between gap-6 md:flex-row">
                 <div className="space-y-2">
-                  <span className="text-sm font-bold uppercase tracking-widest text-[#0001f9]">
+                  <span className="text-sm font-bold uppercase tracking-widest text-brand">
                     Projekt címe
                   </span>
                   <p className="text-2xl font-black leading-tight text-slate-800 md:text-3xl">
@@ -101,7 +101,7 @@ export default function PalyazatokPage() {
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
                 <div className="metric-tile">
-                  <div className="rounded-2xl border border-[#0001f9]/20 bg-[#0001f9] p-3.5 text-white shadow-md sm:p-4">
+                  <div className="rounded-2xl border border-brand/20 bg-brand p-3.5 text-white shadow-md sm:p-4">
                     <Award size={32} />
                   </div>
                   <div className="min-w-0 flex-1">
@@ -113,7 +113,7 @@ export default function PalyazatokPage() {
                 </div>
 
                 <div className="metric-tile">
-                  <div className="rounded-2xl border border-[#0001f9]/20 bg-[#0001f9] p-3.5 text-white shadow-md sm:p-4">
+                  <div className="rounded-2xl border border-brand/20 bg-brand p-3.5 text-white shadow-md sm:p-4">
                     <Percent size={32} />
                   </div>
                   <div className="min-w-0 flex-1">
@@ -128,7 +128,7 @@ export default function PalyazatokPage() {
               <section aria-labelledby="project-content-title">
                 <h2
                   id="project-content-title"
-                  className="mb-4 border-l-4 border-[#0001f9] pl-4 text-xl font-bold text-slate-800"
+                  className="mb-4 flex items-center gap-3 text-xl font-bold text-slate-800 before:h-2 before:w-2 before:shrink-0 before:rounded-full before:bg-brand"
                 >
                   A projekt tartalma
                 </h2>
@@ -152,7 +152,7 @@ export default function PalyazatokPage() {
               <section aria-labelledby="project-results-title">
                 <h2
                   id="project-results-title"
-                  className="mb-4 border-l-4 border-[#0001f9] pl-4 text-xl font-bold text-slate-800"
+                  className="mb-4 flex items-center gap-3 text-xl font-bold text-slate-800 before:h-2 before:w-2 before:shrink-0 before:rounded-full before:bg-brand"
                 >
                   Fő eredmények
                 </h2>
@@ -167,7 +167,7 @@ export default function PalyazatokPage() {
 
               <div className="flex flex-col justify-between gap-4 border-t border-slate-100 pt-8 text-sm font-mono text-slate-500 sm:flex-row">
                 <div>
-                  Azonosító: <span className="font-bold text-[#0001f9]">VEKOP-1.2.6-20-2020-01551</span>
+                  Azonosító: <span className="font-bold text-brand">VEKOP-1.2.6-20-2020-01551</span>
                 </div>
                 <div>
                   Befejezés: <span className="font-bold text-slate-700">2021.10.27</span>
