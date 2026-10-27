@@ -18,6 +18,9 @@ export const company = {
   mapEmbedUrl: "https://www.google.com/maps?q=1033+Budapest,+Csik%C3%B3s+u.+13-15&output=embed",
 } as const;
 
+/** Whole years completed in every month of the build year, so "több mint N év" stays true until the next deploy. */
+export const yearsOfExperience = new Date().getFullYear() - company.foundingYear - 1;
+
 type OpeningHours = Readonly<{
   shortLabel: string;
   label: string;

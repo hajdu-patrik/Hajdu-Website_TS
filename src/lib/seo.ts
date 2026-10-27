@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { company, openingHours, siteUrl } from "@/content/site";
+import { company, openingHours, siteUrl, yearsOfExperience } from "@/content/site";
 
 export const siteName = company.name;
 
 export const homeTitle = `${siteName} | Fagymentes kerti csap, közműépítés és csatornázás`;
 
 const companyDescription =
-  "Hajdú Közmű Kft. közműépítés, ivóvízellátás, csatornázás, mélyépítés és fagymentes kerti csap megoldások Budapesten és környékén, több mint 21 év szakmai tapasztalattal.";
+  `Hajdú Közmű Kft. közműépítés, ivóvízellátás, csatornázás, mélyépítés és fagymentes kerti csap megoldások Budapesten és környékén, több mint ${yearsOfExperience} év szakmai tapasztalattal.`;
 
 const brandVariants = ["Hajdu", "Hajdú", "Hajdu Közmű Kft.", "Hajdu Közmu Kft.", "Hajdu Kozmu Kft."];
 

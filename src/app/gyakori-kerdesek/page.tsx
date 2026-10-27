@@ -5,6 +5,7 @@ import { FeatureCard } from "@/components/ui/Card";
 import { PageShell } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/Heading";
 import { accentAt } from "@/components/ui/accents";
+import { yearsOfExperience } from "@/content/site";
 import { createPageJsonLd, createPageMetadata } from "@/lib/seo";
 
 const description =
@@ -14,7 +15,7 @@ const faqItems = [
   {
     question: "Milyen szerepkörökben dolgoztunk az elmúlt években?",
     answer:
-      "20+ éves gyakorlattal rendelkezünk fővállalkozói, generálvállalkozói és alvállalkozói kivitelezések területén, komplex közműrendszer-feladatokkal.",
+      `Több mint ${yearsOfExperience} éves gyakorlattal rendelkezünk fővállalkozói, generálvállalkozói és alvállalkozói kivitelezések területén, komplex közműrendszer-feladatokkal.`,
   },
   {
     question: "Milyen kiemelt referenciáink vannak?",

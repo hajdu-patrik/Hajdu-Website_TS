@@ -6,13 +6,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/Heading";
 import { PhotoGrid, type Photo } from "@/components/ui/PhotoGrid";
+import { company, yearsOfExperience } from "@/content/site";
 import { createPageJsonLd, createPageMetadata, homeTitle, ogImages } from "@/lib/seo";
 
-const description =
-  "A Hajdú Közmű Kft. közműépítés, csatornázás, ivóvízellátás és fagymentes kerti csap megoldásokat kínál Budapesten. Ha Hajdu, Hajdú, hajdu.hu vagy fagymenteskerticsap.hu kifejezésre keres, itt megtalálja a fontos információkat.";
+const description = `A Hajdú Közmű Kft. ${company.foundingYear} óta végez közműépítést, ivóvíz- és csatornahálózat-kivitelezést Budapesten és környékén, és fagymentes kerti csapokat forgalmaz.`;
 
 const advantages = [
-  "Több mint 20 év tapasztalat közműépítésben, vízellátásban és csatornázásban.",
+  `Több mint ${yearsOfExperience} év tapasztalat közműépítésben, vízellátásban és csatornázásban.`,
   "Budapest és környéke ivóvíz-, szennyvíz- és csapadékvíz-projektjeihez igazodó kivitelezés.",
   "Fagymentes kerti csap és vízvételi megoldások közvetlen szakmai háttérrel.",
   "Gyors ajánlatadás, átlátható kommunikáció és gyakorlati tereptapasztalat.",
