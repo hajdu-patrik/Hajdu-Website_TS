@@ -4,7 +4,7 @@ type JsonLdProps = Readonly<{
 
 export function JsonLd({ data }: JsonLdProps) {
   // Escaping "<" keeps a string inside the data from closing the script element.
-  const json = JSON.stringify(data).replaceAll("<", String.raw`<`);
+  const json = JSON.stringify(data).replaceAll("<", "\\u003c");
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }

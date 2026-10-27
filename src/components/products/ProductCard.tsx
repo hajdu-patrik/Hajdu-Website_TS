@@ -35,7 +35,7 @@ export function ProductCard({ product, isLcp = false }: ProductCardProps) {
           alt={product.alt}
           fill
           sizes="(min-width: 640px) 544px, 100vw"
-          loading="eager"
+          loading={isLcp ? "eager" : "lazy"}
           fetchPriority={isLcp ? "high" : undefined}
           className="object-contain p-4 transition-transform duration-700 group-focus-within:scale-102 group-hover:scale-102 sm:p-6"
         />
