@@ -3,7 +3,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=flat&logo=vercel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=flat)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=flat)
@@ -23,22 +22,22 @@ The project was engineered to bridge the gap between heavy industrial expertise 
 
 ## ✨ Key Engineering Features
 
-* **Semantic Color Architecture:** Implemented a light-only visual system using CSS variables and tuned "soft-contrast" palettes (`bg-slate-50`) to reduce eye strain while maintaining brand integrity.
-* **High-Fidelity Animations:** Integrated `framer-motion` for hardware-accelerated transitions. Features include an "Infinite Loop" partner slider and animated enter/exit transitions (`AnimatePresence`) for the mobile menu and the scroll-to-top button.
-* **Performance-First Assets:** Utilized Next.js `next/image` for automatic AVIF/WebP conversion and lazy-loading, significantly improving Largest Contentful Paint (LCP) scores.
-* **Responsive Fluid Layouts:** Engineered a grid-based system that adapts from mobile-first views to wide-screen desktop monitors using Tailwind CSS v4's modern utility engine.
-* **Accessible Navigation:** Hash-aware scroll logic smoothly scrolls to in-page anchors (e.g. `/#referenciak`) on load and on hash changes, ensuring consistent UX regardless of the entry point, and a skip link (`#main-content`) lets keyboard users bypass the navigation.
+* **Design System:** Colour, typography, shadow and motion tokens live in Tailwind CSS v4's `@theme` (`src/app/globals.css`), and shared components (container, headings, cards, buttons, photo grid) give every page the same visual language from 320 px phones to wide desktops.
+* **Server-First Rendering:** Every page is a statically prerendered React Server Component. Only the navigation, the back-to-top link and the company marquee's pause toggle ship client-side JavaScript, and all animations are plain CSS.
+* **Performance-First Assets:** Photos are stored as WebP at most 1600 px wide and served through `next/image` as AVIF/WebP with accurate `sizes` hints. Only the above-the-fold image loads eagerly. Inter is self-hosted with `font-display: swap`, and static images are cached for a year.
+* **Accessibility (WCAG 2.2 AA):** A skip link, proper landmarks and heading order, visible focus styles, and touch targets of at least 24 px (44 px for buttons and navigation). The mobile menu is a native modal `<dialog>` that traps focus, closes on Escape and returns focus to its toggle, and every animation honours `prefers-reduced-motion`.
+* **Search Engine Optimization:** One module (`src/lib/seo.ts`) generates titles, canonical URLs, 1200×630 Open Graph and Twitter cards, and JSON-LD structured data (business, website, breadcrumbs, FAQ and product list). The sitemap, `robots.txt` and the web manifest are derived from the same company data in `src/content/site.ts`.
+* **Security Headers:** A Content Security Policy plus HSTS, frame, referrer and permissions policies are set in `next.config.ts`.
 
 ---
 
 ## 🛠️ Technology Stack
 
-* **Framework:** [Next.js 16](https://nextjs.org/) (App Router Architecture)
+* **Framework:** [Next.js 16](https://nextjs.org/) (App Router, React 19 Server Components)
 * **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed for enterprise-grade reliability)
-* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (Atomic CSS approach)
-* **Motion Engine:** [Framer Motion](https://www.framer.com/motion/)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (Design tokens with `@theme`)
 * **Icons:** [Lucide React](https://lucide.dev/)
-* **CI/CD:** [Vercel](https://vercel.com/) (Automated builds & deployments)
+* **CI/CD:** [Vercel](https://vercel.com/) (Automated builds & deployments, Web Analytics, Speed Insights)
 
 ---
 
@@ -56,6 +55,8 @@ This was a private, commercial project developed for a specific client. The inte
 
 This project is configured for automated deployment via **Vercel**.
 Any push to the `main` branch automatically triggers a new build and deployment.
+
+Files in `public/` are served with a one-year immutable cache, so a replaced image must get a new file name to reach returning visitors.
 
 | Environment | Status |
 | :--- | :--- |
