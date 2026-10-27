@@ -33,6 +33,7 @@ export default function config(phase: string): NextConfig {
   return {
     allowedDevOrigins: ["192.168.56.1", "localhost:3000"],
     poweredByHeader: false,
+    agentRules: false,
     images: {
       formats: ["image/avif", "image/webp"],
       minimumCacheTTL: 2_678_400,
