@@ -1,43 +1,31 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import React from "react";
+import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import JsonLdScript from "@/components/seo/JsonLdScript";
-import { rootJsonLd } from "@/app/layoutSeo";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { siteJsonLd } from "@/lib/seo";
+import { inter } from "./fonts";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], preload: false });
+export { rootMetadata as metadata, rootViewport as viewport } from "@/lib/seo";
 
-export { rootMetadata as metadata, rootViewport as viewport } from "@/app/layoutSeo";
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="hu" className="scroll-smooth" data-scroll-behavior="smooth">
-      <head>
-        <JsonLdScript id="root-jsonld" data={rootJsonLd} />
-      </head>
-      <body
-        className={`${inter.className} min-h-screen flex flex-col bg-slate-50 text-slate-900 transition-colors duration-500`}
-      >
+    <html lang="hu" className={inter.variable} data-scroll-behavior="smooth">
+      <body id="top" className="flex min-h-screen flex-col">
+        <JsonLd data={siteJsonLd} />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-xl focus:bg-brand focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-xl focus:bg-brand focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-white"
         >
           Ugrás a fő tartalomra
         </a>
-        <Navbar />
-        <main id="main-content" className="flex-grow focus:outline-none">
+        <SiteHeader />
+        <main id="main-content" tabIndex={-1} className="grow outline-none">
           {children}
         </main>
-        <Footer />
-        <ScrollToTop />
+        <SiteFooter />
         <Analytics />
         <SpeedInsights />
       </body>

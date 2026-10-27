@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import TermekekGrid from "@/features/termekek/components/TermekekGrid";
-import JsonLdScript from "@/components/seo/JsonLdScript";
-import {
-  absoluteUrl,
-  createBreadcrumbJsonLd,
-  createPageMetadata,
-  siteName,
-  siteUrl,
-} from "@/lib/seo";
+import { ProductCard, type Product } from "@/components/products/ProductCard";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { PageShell } from "@/components/ui/Container";
+import { PageHeader } from "@/components/ui/Heading";
+import { absoluteUrl, createPageJsonLd, createPageMetadata, ogImages } from "@/lib/seo";
 
-const products = [
+const description =
+  "Fagymentes kerti csap és kézi szivattyú a Hajdú Közmű Kft. kínálatából. Ha a hajdu.hu vagy fagymenteskerticsap.hu kulcsszóra keres, itt részletes termékinformációt és ajánlatkérési lehetőséget talál.";
+
+const products: readonly Product[] = [
   {
     id: "fagymentes-kerti-csap",
     title: "Fagymentes kerti csap",
@@ -44,11 +43,9 @@ const products = [
 
 export const metadata: Metadata = createPageMetadata({
   title: "Fagymentes kerti csap és vízellátási termékek",
-  description:
-    "Fagymentes kerti csap és kézi szivattyú a Hajdú Közmű Kft. kínálatából. Ha a hajdu.hu vagy fagymenteskerticsap.hu kulcsszóra keres, itt részletes termékinformációt és ajánlatkérési lehetőséget talál.",
+  description,
   path: "/termekek",
-  image: "/termekek/FagymentesKertiCsapTermekNoBg.webp",
-  imageAlt: "Fagymentes kerti csap termék a Hajdú Közmű Kft. kínálatából",
+  ogImage: ogImages.products,
   keywords: [
     "fagymentes kerti csap ár nélkül",
     "fagymentes kerti csap ajánlatkérés",
@@ -58,71 +55,45 @@ export const metadata: Metadata = createPageMetadata({
   ],
 });
 
-export default function TermekekPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@id": `${siteUrl}/termekek#webpage`,
-        "@type": "CollectionPage",
-        "name": "Termékeink | Hajdú Közmű Kft.",
-        "url": `${siteUrl}/termekek`,
-        "description": metadata.description,
-        "inLanguage": "hu-HU",
-        "breadcrumb": {
-          "@id": `${siteUrl}/termekek#breadcrumb`,
-        },
-      },
-      {
-        "@id": `${siteUrl}/termekek#products`,
-        "@type": "ItemList",
-        "name": "Fagymentes kerti csap és vízellátási termékek",
-        "itemListElement": products.map((product, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
+const jsonLd = createPageJsonLd({
+  type: "CollectionPage",
+  path: "/termekek",
+  name: "Termékeink | Hajdú Közmű Kft.",
+  description,
+  breadcrumb: "Termékek",
+  nodes: [
+    {
+      "@type": "ItemList",
+      "@id": `${absoluteUrl("/termekek")}#products`,
+      name: "Fagymentes kerti csap és vízellátási termékek",
+      itemListElement: products.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Product",
+          name: product.title,
+          description: product.description,
+          image: absoluteUrl(product.image),
           url: absoluteUrl(`/termekek#${product.id}`),
-          item: {
-            "@type": "Product",
-            name: product.title,
-            description: product.description,
-            image: absoluteUrl(product.image),
-            brand: {
-              "@type": "Brand",
-              name: siteName,
-            },
-            manufacturer: {
-              "@id": `${siteUrl}#organization`,
-            },
-          },
-        })),
-      },
-      {
-        "@id": `${siteUrl}/termekek#breadcrumb`,
-        ...createBreadcrumbJsonLd([
-          { name: "Főoldal", path: "/" },
-          { name: "Termékek", path: "/termekek" },
-        ]),
-      },
-    ],
-  };
+        },
+      })),
+    },
+  ],
+});
 
+export default function TermekekPage() {
   return (
-    <>
-      <JsonLdScript id="termekek-jsonld" data={jsonLd} />
-      <main className="page-shell">
-        <div className="page-container">
-          <section aria-labelledby="termekek-title" className="page-intro">
-            <h1 id="termekek-title" className="page-title text-center">
-              Termékeink
-            </h1>
-            <p className="page-subtitle">
-              Prémium minőségű alkatrészek és berendezések a vízellátás szolgálatában.
-            </p>
-          </section>
-
-          <TermekekGrid products={products} />
-        </div>
-      </main>
-    </>
+    <PageShell>
+      <JsonLd data={jsonLd} />
+      <PageHeader
+        title="Termékeink"
+        description="Prémium minőségű alkatrészek és berendezések a vízellátás szolgálatában."
+      />
+      <div className="product-grid grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-12">
+        {products.map((product, index) => (
+          <ProductCard key={product.id} product={product} isLcp={index === 0} />
+        ))}
+      </div>
+    </PageShell>
   );
 }
